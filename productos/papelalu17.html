@@ -3,53 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Papel Aluminio 1kg - Papelera Pierrastegui</title>
-    <link rel="icon" href="./assets/images/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./assets/css/inicio.css">
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyD9T9Y34jeQUtscNdjn-aZ54B4kEisNk3c",
-            authDomain: "papelera-pie.firebaseapp.com",
-            projectId: "papelera-pie",
-            storageBucket: "papelera-pie.firebasestorage.app",
-            messagingSenderId: "407925272882",
-            appId: "1:407925272882:web:4ce4347c5cba2e95b4a72b",
-            measurementId: "G-YXB9F6CTN0"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth();
-
-        document.addEventListener("DOMContentLoaded", () => {
-            onAuthStateChanged(auth, (user) => {
-                const authButtons = document.getElementById("auth-buttons");
-                const userMenu = document.getElementById("user-menu");
-
-                if (user) {
-                    document.getElementById("user-name").textContent = user.displayName || "Usuario";
-                    authButtons.style.display = "none"; // Ocultar botones de login y registro
-                    userMenu.style.display = "block";   // Mostrar menú de usuario
-                } else {
-                    authButtons.style.display = "block"; // Mostrar botones de login y registro
-                    userMenu.style.display = "none";     // Ocultar menú de usuario
-                }
-            });
-
-            document.getElementById("logout").addEventListener("click", () => {
-                signOut(auth).then(() => {
-                    window.location.href = "index.html"; // Recargar la página tras cerrar sesión
-                }).catch((error) => {
-                    alert("Error al cerrar sesión: " + error.message);
-                });
-            });
-        });
-    </script>
+    <title>Papelera Pierrastegui - Papel Aluminio 1kg</title>
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/productos.css">
 </head>
 <body>
-
     <header>
         <h1>Papelera Pierrastegui</h1>
         <nav>
@@ -59,31 +17,24 @@
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
-        <div id="auth-buttons">
-            <button class="logreg" onclick="window.location.href='logueo.html'">Iniciar sesión</button>
-            <button class="logreg reg" onclick="window.location.href='registro.html'">Registrarse</button>
-        </div>
-        <div id="user-menu" style="display:none;">
-            <div class="user-icon" onclick="toggleMenu()">
-                👤 <span id="user-name"></span>
-            </div>
-            <div class="user-dropdown" id="user-dropdown">
-                <a href="#">Opciones</a>
-                <button id="logout">Cerrar sesión</button>
-            </div>
-        </div>
     </header>
 
     <main>
         <section id="producto-detalle">
             <h2>Papel Aluminio 1kg</h2>
-            <div class="producto">
-                <img src="assets/images/papel-aluminio-1kg.jpg" alt="Papel Aluminio 1kg">
+            <div class="producto-container">
+                <!-- Imagen del producto -->
+                <div class="producto-imagen">
+                    <img src="assets/images/papel-aluminio-1kg.jpg" alt="Papel Aluminio 1kg">
+                </div>
+
+                <!-- Información del producto -->
                 <div class="producto-info">
-                    <h3>Descripción:</h3>
-                    <p>El papel aluminio de 1kg es ideal para todo tipo de usos domésticos y comerciales. Resistente y fácil de usar, es perfecto para almacenar alimentos, envolver objetos y más.</p>
-                    <h3>Precio:</h3>
-                    <p class="precio">$350</p>
+                    <h3>Descripción</h3>
+                    <p>El papel aluminio de alta calidad, ideal para uso en la cocina, empaques y más. Resistente y fácil de usar.</p>
+                    
+                    <p class="precio">$200.00</p>
+                    
                     <button class="agregar-al-carrito">Agregar al carrito</button>
                 </div>
             </div>
@@ -95,13 +46,6 @@
         <p>2025 © Sol Argentino TV | Creado por los desarrolladores de Sol Argentino TV</p>
     </footer>
 
-    <script src="./assets/js/inicio.js"></script>
-    <script>
-        function toggleMenu() {
-            const dropdown = document.getElementById("user-dropdown");
-            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-        }
-    </script>
-
+    <script src="assets/js/producto.js"></script> <!-- Si tienes algún JS para la funcionalidad -->
 </body>
 </html>

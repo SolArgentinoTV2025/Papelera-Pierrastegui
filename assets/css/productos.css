@@ -1,0 +1,164 @@
+/* Estilos Generales para todos los productos */
+
+body {
+    font-family: 'Gilroy', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Contenedor principal del producto */
+#producto-detalle {
+    padding: 2em;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 2em auto;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Título del producto */
+#producto-detalle h2 {
+    font-size: 2em;
+    color: #483606;
+    margin-bottom: 1em;
+}
+
+/* Contenedor de producto: imagen + información */
+.producto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+/* Imagen del producto */
+.producto-imagen {
+    flex: 1;
+    max-width: 45%;
+    padding-right: 2em;
+    margin-bottom: 1em;
+}
+
+.producto-imagen img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Información del producto */
+.producto-info {
+    flex: 1;
+    max-width: 45%;
+    margin-bottom: 1em;
+}
+
+/* Descripción del producto */
+.producto-info h3 {
+    font-size: 1.5em;
+    color: #483606;
+    margin-bottom: 1em;
+}
+
+.producto-info p {
+    font-size: 1.1em;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 1.5em;
+}
+
+/* Precio */
+.precio {
+    font-weight: 700;
+    font-size: 1.8em;
+    color: #ff7f50;
+    margin-bottom: 1.5em;
+}
+
+/* Botón agregar al carrito */
+.agregar-al-carrito {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.agregar-al-carrito:hover {
+    background-color: #0056b3;
+}
+
+/* Footer del producto */
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #c5c0a5;
+    color: #483606;
+    margin-top: 3em;
+    box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.1);
+}
+
+/* Media Queries para diseño responsivo */
+@media (max-width: 75em) { /* 1200px */
+    .producto-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .producto-imagen, .producto-info {
+        max-width: 100%;
+        padding-right: 0;
+        padding-left: 0;
+    }
+
+    .producto-info {
+        margin-top: 2em;
+    }
+}
+
+@media (max-width: 56.25em) { /* 900px */
+    .producto-info h3 {
+        font-size: 1.3em;
+    }
+
+    .precio {
+        font-size: 1.6em;
+    }
+
+    .agregar-al-carrito {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 37.5em) { /* 600px */
+    .producto-info h3 {
+        font-size: 1.2em;
+    }
+
+    .precio {
+        font-size: 1.4em;
+    }
+
+    .agregar-al-carrito {
+        font-size: 1em;
+        padding: 8px 16px;
+    }
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: #c5c0a5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffff;
+    border-radius: 6px;
+}
