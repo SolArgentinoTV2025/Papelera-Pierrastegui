@@ -10,4 +10,7 @@ module.exports = function(eleventyConfig) {
 
   // Copiar la carpeta 'json' a '_site/assets/json'
   eleventyConfig.addPassthroughCopy("assets/json");
+
+    // Copiar la carpeta 'productos' a '_site/assets/json'
+    eleventyConfig.addPassthroughCopy("productos");
 };
