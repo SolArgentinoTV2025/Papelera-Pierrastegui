@@ -1,151 +1,132 @@
-/* Estilos Generales para todos los productos */
+@import url('https://fuentes.solargentinotv.com.ar/importgilroy.css');
 
 body {
     font-family: 'Gilroy', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #c5c0a5;
+    font-size: 1em;
 }
 
-/* Contenedor principal del producto */
+header {
+    background-color: #c5c0a5;
+    color: #483606;
+    padding: 1em;
+    text-align: center;
+    box-shadow: 0 0 0.4em 0 #00000073;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav ul li a {
+    color: #483606;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    font-weight: 700;
+}
+
 #producto-detalle {
     padding: 2em;
-    background-color: #fff;
-    max-width: 1200px;
-    margin: 2em auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Título del producto */
-#producto-detalle h2 {
-    font-size: 2em;
     color: #483606;
-    margin-bottom: 1em;
-}
-
-/* Contenedor de producto: imagen + información */
-.producto-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 2em;
 }
 
-/* Imagen del producto */
-.producto-imagen {
-    flex: 1;
-    max-width: 45%;
-    padding-right: 2em;
-    margin-bottom: 1em;
-}
-
-.producto-imagen img {
+.producto-detalle img {
     width: 100%;
+    max-width: 400px;
     height: auto;
     border-radius: 8px;
-    object-fit: cover;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.1);
 }
 
-/* Información del producto */
 .producto-info {
-    flex: 1;
-    max-width: 45%;
-    margin-bottom: 1em;
+    max-width: 500px;
+    margin-left: 2em;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Descripción del producto */
 .producto-info h3 {
     font-size: 1.5em;
-    color: #483606;
     margin-bottom: 1em;
 }
 
 .producto-info p {
-    font-size: 1.1em;
-    line-height: 1.5;
-    color: #555;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
+    font-size: 1.2em;
 }
 
-/* Precio */
 .precio {
     font-weight: 700;
-    font-size: 1.8em;
-    color: #ff7f50;
-    margin-bottom: 1.5em;
+    font-size: 1.5em;
+    color: #483606;
 }
 
-/* Botón agregar al carrito */
-.agregar-al-carrito {
-    background-color: #007bff;
-    color: white;
+.agregar-carrito {
+    background-color: #483606;
+    color: #c5c0a5;
     border: none;
-    padding: 12px 25px;
-    font-size: 1.1em;
-    border-radius: 5px;
+    padding: 0.8em;
+    font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 50%;
+    margin-top: 1.5em;
 }
 
-.agregar-al-carrito:hover {
-    background-color: #0056b3;
+.agregar-carrito:hover {
+    background-color: #c5c0a5;
+    color: #483606;
 }
 
-/* Footer del producto */
 footer {
     text-align: center;
     padding: 1em;
     background-color: #c5c0a5;
     color: #483606;
-    margin-top: 3em;
-    box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.1);
+    margin-top: 2em;
+    line-height: 0;
+    box-shadow: 0 0 0.4em 0 #00000073;
 }
 
-/* Media Queries para diseño responsivo */
-@media (max-width: 75em) { /* 1200px */
-    .producto-container {
+footer p {
+    margin: 0.5em 0;
+}
+
+/* Media Queries */
+@media (max-width: 75em) {
+    #producto-detalle {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .producto-imagen, .producto-info {
-        max-width: 100%;
-        padding-right: 0;
-        padding-left: 0;
-    }
-
-    .producto-info {
-        margin-top: 2em;
     }
 }
 
-@media (max-width: 56.25em) { /* 900px */
-    .producto-info h3 {
-        font-size: 1.3em;
-    }
-
-    .precio {
-        font-size: 1.6em;
-    }
-
-    .agregar-al-carrito {
-        padding: 10px 20px;
+@media (max-width: 56.25em) {
+    #producto-detalle {
+        flex-direction: column;
     }
 }
 
-@media (max-width: 37.5em) { /* 600px */
-    .producto-info h3 {
-        font-size: 1.2em;
-    }
-
-    .precio {
-        font-size: 1.4em;
-    }
-
-    .agregar-al-carrito {
-        font-size: 1em;
-        padding: 8px 16px;
+@media (max-width: 37.5em) {
+    #producto-detalle {
+        padding: 1em;
     }
 }
 
