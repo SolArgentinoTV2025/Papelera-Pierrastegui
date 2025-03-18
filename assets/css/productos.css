@@ -46,6 +46,12 @@ nav ul li a {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background: #f1ecd6;
+    width: 66em;
+    position: absolute;
+    margin-left: 29em;
+    margin-top: 10em;
+    border-radius: 0.3em;
 }
 
 .producto-detalle img {
@@ -80,21 +86,23 @@ nav ul li a {
 }
 
 .agregar-carrito {
-    background-color: #483606;
-    color: #c5c0a5;
-    border: none;
+    border: 2px solid #483606;
+    background-color: #f1ecd6;
     padding: 0.8em;
+    color: #483606;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s ease;
     width: 50%;
     margin-top: 1.5em;
+    font-family: 'Gilroy';
+    font-size: 1.2em;
 }
 
 .agregar-carrito:hover {
-    background-color: #c5c0a5;
-    color: #483606;
+    background-color: #483606;
+    color: #f1ecd6;
 }
 
 footer {
@@ -105,10 +113,13 @@ footer {
     margin-top: 2em;
     line-height: 0;
     box-shadow: 0 0 0.4em 0 #00000073;
+    position: relative;
+    bottom: -43.84em;
 }
 
 footer p {
     margin: 0.5em 0;
+    line-height: 0.6em;
 }
 
 /* Media Queries */
