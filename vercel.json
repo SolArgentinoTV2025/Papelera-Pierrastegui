@@ -1,19 +1,6 @@
 {
     "cleanUrls": true,
     "trailingSlash": false,
-    "redirects": [
-      {
-        "source": "/:path*",
-        "destination": "/:path*",
-        "permanent": true
-      }
-    ],
-    "builds": [
-      {
-        "src": "**/*.html",
-        "use": "@vercel/static"
-      }
-    ],
     "routes": [
       {
         "src": "/(.*)",
