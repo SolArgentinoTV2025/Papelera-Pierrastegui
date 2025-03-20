@@ -13,12 +13,9 @@ body {
 header {
     background-color: #c5c0a5;
     color: #483606;
-    padding: 2em 1em; /* Aumentamos el padding para más espacio */
+    padding: 1em;
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar un toque moderno */
-    border-bottom: 2px solid #483606; /* Línea inferior para separar visualmente */
-    margin-bottom: 3em; /* Un pequeño margen inferior para separar el header del contenido */
-    font-family: 'Gilroy', sans-serif; /* Aseguramos que la fuente es consistente */
+    box-shadow: 0 0 0.4em 0 #00000073;
 }
 
 header h1 {
@@ -83,7 +80,7 @@ nav ul li a:hover {
 
 .subtitulo {
     font-size: 1.2em;
-    color: #6a6a6a;
+    color: #483606;
     font-weight: 400;
     margin-bottom: 1.5em;
 }
@@ -107,6 +104,9 @@ nav ul li a:hover {
     align-items: center;
     justify-content: center;
     transition: color 0.3s ease;
+    width: 6em;
+    left: 40.4%;
+    position: relative;
 }
 
 .enlace-pago a:hover {
@@ -128,6 +128,7 @@ nav ul li a:hover {
 .contacto-info li {
     font-size: 1.2em;
     margin-bottom: 1.2em;
+    line-height: 0.2em;
 }
 
 .contacto-info a {
@@ -143,14 +144,15 @@ nav ul li a:hover {
 
 footer {
     text-align: center;
-    padding: 2em 1em;
-    background: linear-gradient(135deg, #483606 0%, #c5c0a5 100%);
-    color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    background-color: #c5c0a5;
+    color: #483606;
+    margin-top: 2em;
+    line-height: 0;
+    box-shadow: 0 0 0.4em 0 #00000073;
 }
 
 footer p {
-    margin: 0.5em 0;
 }
 
 @media (max-width: 75em) {
@@ -182,6 +184,6 @@ footer p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #483606;
+    background: #f1ecd6;
     border-radius: 10px;
 }
