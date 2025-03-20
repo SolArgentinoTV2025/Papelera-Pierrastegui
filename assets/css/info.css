@@ -11,17 +11,21 @@ body {
 }
 
 header {
-    background: linear-gradient(135deg, #483606 0%, #c5c0a5 100%);
-    color: #ffffff;
-    padding: 2em 1em;
+    background-color: #c5c0a5;
+    color: #483606;
+    padding: 2em 1em; /* Aumentamos el padding para más espacio */
     text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para dar un toque moderno */
+    border-bottom: 2px solid #483606; /* Línea inferior para separar visualmente */
+    margin-bottom: 3em; /* Un pequeño margen inferior para separar el header del contenido */
+    font-family: 'Gilroy', sans-serif; /* Aseguramos que la fuente es consistente */
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.8em;
-    font-weight: 800;
+    font-size: 3em; /* Hacemos el título más grande */
+    font-weight: 700; /* Mayor peso para destacar el título */
+    letter-spacing: 1px; /* Un pequeño espaciado entre letras */
 }
 
 nav ul {
@@ -29,30 +33,34 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    margin-top: 1em;
+    margin-top: 1.5em;
 }
 
 nav ul li {
-    margin: 0 1.2em;
+    margin: 0 1.5em;
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #483606;
     text-decoration: none;
     padding: 0.5em 1em;
     font-size: 1.2em;
+    font-weight: 600;
     transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #c5c0a5;
+    color: #c5c0a5; /* Cambio de color al pasar el mouse */
+    background-color: #483606; /* Fondo oscuro al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados para el hover */
+    padding: 0.5em 1.2em; /* Aumentamos el padding para un efecto más notorio */
 }
 
 #medio-pago-articulo {
     max-width: 900px;
     margin: 4em auto;
     padding: 2.5em 3em;
-    background: #ffffff;
+    background: #f1ecd6; /* Fondo del contenedor del artículo */
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
