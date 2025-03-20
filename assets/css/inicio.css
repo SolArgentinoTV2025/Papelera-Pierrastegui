@@ -5,7 +5,9 @@ body {
     margin: 0;
     padding: 0;
     background-color: #c5c0a5;
-    font-size: 1em;
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #483606;
 }
 
 header {
@@ -15,94 +17,11 @@ header {
     text-align: center;
     box-shadow: 0 0 0.4em 0 #00000073;
 }
-
-.mpavisoext {
-    margin-left: 7em;
-}
-
-.infomdp {
-    margin-top: -7em;
-    margin-left: -34.9em;
-    position: absolute;
-    color: #483606;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    text-decoration: none;
-    font-weight: 700;
-    border-radius: 0.2em;
-    border: 4px solid #483606;
-    background: #c5c0a5;
-}
-
-.infomdp:hover {
-    background: #483606;
-    color: #c5c0a5;
-}
-
-.mpaviso {
-    font-weight: 700;
-    position: absolute;
-    margin-left: -57em;
-    margin-top: -7em;
-    background: #483606;
-    color: #c5c0a5;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    border-radius: 0.3em;
-    border: 4px solid #483606;
-}
-
-.mpaviso::after {
-    content: '⚠️';
-    position: absolute;
-    margin-left: 0.3em !important;!im;!imo;!imop;!i;!;
-}
-
-.mpaviso::before, .mpaviso::after {
-    content: '⚠️';
-    position: absolute;
-    margin-left: -1.5em;
-    margin-top: -0.1em;
-}
-
-.logreg {
-    background: #c5c0a5;
-    color: #483606;
-    border: 4px solid #483606;
-    padding-left: 2em;
-    padding-right: 2em;!em;!e;!;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    font-family: 'Gilroy';
-    font-weight: 700;
-    font-size: 16px;
-    border-radius: 5px;
-    display: block;
-    width: 11em;
-    margin-left: 33em;
-    margin-top: -4em;
-    position: absolute;
-}
-
-.logreg:hover {
-    background: #483606;
-    color: #c5c0a5;
-    cursor: pointer;
-}
-
-.reg {
-    margin-top: -1.6em;
-}
-
-div#auth-buttons {
-    color: #483606;
-    background: #c5c0a5;
-    position: relative;
-    margin-left: 38em;
+header h1 {
+    margin: 0;
+    font-size: 3em; /* Hacemos el título más grande */
+    font-weight: 700; /* Mayor peso para destacar el título */
+    letter-spacing: 1px; /* Un pequeño espaciado entre letras */
 }
 
 nav ul {
@@ -110,58 +29,114 @@ nav ul {
     padding: 0;
     display: flex;
     justify-content: center;
-    margin: 0;
+    margin-top: 1.5em;
 }
 
 nav ul li {
-    margin: 0 1em;
-    position: relative;
-    color: #007bff;
+    margin: 0 1.5em;
 }
 
 nav ul li a {
     color: #483606;
     text-decoration: none;
     padding: 0.5em 1em;
-    display: block;
-    font-weight: 700;
+    font-size: 1.2em;
+    font-weight: 600;
+    transition: color 0.3s ease;
 }
 
-#catalogo {
-    padding: 2em;
-    color: #483606;
+nav ul li a:hover {
+    color: #c5c0a5; /* Cambio de color al pasar el mouse */
+    background-color: #483606; /* Fondo oscuro al pasar el mouse */
+    border-radius: 5px; /* Bordes redondeados para el hover */
+    padding: 0.5em 1.2em; /* Aumentamos el padding para un efecto más notorio */
 }
 
-.productos {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 11em;
+#medio-pago-articulo {
+    max-width: 900px;
+    margin: 4em auto;
+    padding: 2.5em 3em;
+    background: #f1ecd6; /* Fondo del contenedor del artículo */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-.producto {
-    background: #f1ecd6;
-    padding: 1em;
+#medio-pago-articulo:hover {
+    transform: translateY(-5px);
+}
+
+.articulo-header {
     text-align: center;
-    border-radius: 0.5em;
-    box-shadow: 0 0 1em rgba(0,0,0,0.1);
-    margin: 1em;
-    width: calc(20% - 2em);
+    margin-bottom: 2em;
+}
+
+.articulo-header h2 {
+    font-size: 2.5em;
     color: #483606;
+    margin-bottom: 0.5em;
 }
 
-.precio {
+.subtitulo {
+    font-size: 1.2em;
+    color: #6a6a6a;
+    font-weight: 400;
+    margin-bottom: 1.5em;
+}
+
+.contenido-articulo {
+    font-size: 1.1em;
+    margin-bottom: 2em;
+}
+
+.contenido-articulo p {
+    margin-bottom: 1.8em;
+    font-weight: 400;
+}
+
+.enlace-pago a {
+    font-size: 1.5em;
     font-weight: 700;
+    color: #483606;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+    width: 6em;
+    margin-left: 40.4%;
 }
 
-.producto img {
-    width: 20.8em;
-    margin-bottom: 1em;
-    margin-left: -1em;
-    margin-top: -1em;
-    height: 12em;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    object-fit: cover;
+.enlace-pago a:hover {
+    color: #c5c0a5;
+}
+
+.enlace-pago img {
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+
+.contacto-info {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 1.5em;
+}
+
+.contacto-info li {
+    font-size: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+.contacto-info a {
+    color: #483606;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.contacto-info a:hover {
+    color: #c5c0a5;
 }
 
 footer {
@@ -170,45 +145,43 @@ footer {
     background-color: #c5c0a5;
     color: #483606;
     margin-top: 2em;
-    line-height: 0;
+    line-height: 1;
     box-shadow: 0 0 0.4em 0 #00000073;
 }
 
-/* Media Queries para diseÃ±o responsivo */
-@media (max-width: 75em) { /* 1200px */
-    .producto {
-        width: calc(25% - 2em);
+footer p {
+    margin: 0.5em 0;
+}
+
+@media (max-width: 75em) {
+    #medio-pago-articulo {
+        padding: 2em;
     }
 }
 
-@media (max-width: 56.25em) { /* 900px */
-    .producto {
-        width: calc(33.33% - 2em);
+@media (max-width: 56.25em) {
+    #medio-pago-articulo {
+        padding: 1.5em;
     }
 }
 
-@media (max-width: 37.5em) { /* 600px */
-    .producto {
-        width: calc(50% - 2em);
-    }
-}
-
-@media (max-width: 25em) { /* 400px */
-    .producto {
-        width: calc(100% - 2em);
+@media (max-width: 37.5em) {
+    #medio-pago-articulo {
+        padding: 1.2em;
+        width: 95%;
     }
 }
 
 /* Scrollbar personalizada */
 ::-webkit-scrollbar {
-    width: 5px; /* Grosor de la barra de desplazamiento */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #c5c0a5; /* Color de fondo de la barra de desplazamiento */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #ffff; /* Color del "agarre" de la barra de desplazamiento */
-    border-radius: 6px;
-  }
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #c5c0a5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #483606;
+    border-radius: 10px;
+}
