@@ -22,7 +22,7 @@ header {
 
 .infomdp {
     margin-top: -7em;
-    margin-left: -34.9em;
+    margin-left: -34.581em;
     position: absolute;
     color: #483606;
     padding-left: 2em;
@@ -31,7 +31,8 @@ header {
     padding-bottom: 0.3em;
     text-decoration: none;
     font-weight: 700;
-    border-radius: 0.2em;
+    border-top-right-radius: 0.2em;
+    border-bottom-right-radius: 0.2em;
     border: 4px solid #483606;
     background: #c5c0a5;
 }
@@ -52,8 +53,9 @@ header {
     padding-right: 2em;
     padding-top: 0.3em;
     padding-bottom: 0.3em;
-    border-radius: 0.3em;
     border: 4px solid #483606;
+    border-top-left-radius: 0.2em;
+    border-bottom-left-radius: 0.2em;
 }
 
 .mpaviso::after {
