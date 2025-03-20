@@ -5,7 +5,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #c5c0a5;
-    font-size: 1.1em;
+    font-size: 1em;
     line-height: 1.7;
     color: #483606;
 }
@@ -16,13 +16,7 @@ header {
     padding: 1em;
     text-align: center;
     box-shadow: 0 0 0.4em 0 #00000073;
-}
-
-header h1 {
-    margin: 0;
-    font-size: 3em; /* Hacemos el título más grande */
-    font-weight: 700; /* Mayor peso para destacar el título */
-    letter-spacing: 1px; /* Un pequeño espaciado entre letras */
+    font-size: 1em !important;!i;!;!;!;
 }
 
 nav ul {
