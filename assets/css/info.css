@@ -4,10 +4,10 @@ body {
     font-family: 'Gilroy', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f0e9;
+    background-color: #c5c0a5;
     font-size: 1.1em;
     line-height: 1.7;
-    color: #2a2a2a;
+    color: #483606;
 }
 
 header {
@@ -93,7 +93,7 @@ nav ul li a:hover {
 .enlace-pago a {
     font-size: 1.5em;
     font-weight: 700;
-    color: #0077cc;
+    color: #483606;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -102,7 +102,7 @@ nav ul li a:hover {
 }
 
 .enlace-pago a:hover {
-    color: #005fa3;
+    color: #c5c0a5;
 }
 
 .enlace-pago img {
@@ -123,14 +123,14 @@ nav ul li a:hover {
 }
 
 .contacto-info a {
-    color: #0077cc;
+    color: #483606;
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease;
 }
 
 .contacto-info a:hover {
-    color: #005fa3;
+    color: #c5c0a5;
 }
 
 footer {
@@ -170,10 +170,10 @@ footer p {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f0f0e9;
+    background: #c5c0a5;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #c5c0a5;
+    background: #483606;
     border-radius: 10px;
 }
