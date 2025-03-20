@@ -4,20 +4,21 @@ body {
     font-family: 'Gilroy', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #c5c0a5;
+    background-color: #f4f3e5;
     font-size: 1em;
 }
 
 header {
     background-color: #c5c0a5;
     color: #483606;
-    padding: 1em;
+    padding: 1.5em;
     text-align: center;
     box-shadow: 0 0 0.4em 0 #00000073;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em;
 }
 
 nav ul {
@@ -26,10 +27,11 @@ nav ul {
     display: flex;
     justify-content: center;
     margin: 0;
+    flex-wrap: wrap;
 }
 
 nav ul li {
-    margin: 0 1em;
+    margin: 0.5em;
 }
 
 nav ul li a {
@@ -40,68 +42,55 @@ nav ul li a {
     font-weight: 700;
 }
 
-#producto-detalle {
+#medio-pago-articulo {
+    max-width: 800px;
+    margin: 4em auto;
     padding: 2em;
-    color: #483606;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    background: #f1ecd6;
-    width: 66em;
-    position: absolute;
-    margin-left: 29em;
-    margin-top: 10em;
-    border-radius: 0.3em;
-}
-
-.producto-detalle img {
-    width: 100%;
-    max-width: 15px;
-    height: auto;
+    background: #fff;
     border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
-.producto-info {
-    max-width: 500px;
-    margin-left: 2em;
-    display: flex;
-    flex-direction: column;
+#medio-pago-articulo header h2 {
+    font-size: 2em;
+    color: #483606;
+    margin-bottom: 0.5em;
 }
 
-.producto-info h3 {
-    font-size: 1.5em;
-    margin-bottom: 1em;
+.subtitulo {
+    font-size: 1.2em;
+    color: #6a6a6a;
+    margin-bottom: 1.5em;
 }
 
-.producto-info p {
-    margin-bottom: 1em;
+.contenido-articulo {
+    color: #483606;
+    line-height: 1.8;
+}
+
+.contenido-articulo p {
+    margin-bottom: 1.5em;
     font-size: 1.2em;
 }
 
-.precio {
-    font-weight: 700;
-    font-size: 1.5em;
-    color: #483606;
+.contenido-articulo a {
+    color: #0077cc;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.agregar-carrito {
-    border: 2px solid #483606;
-    background-color: #f1ecd6;
-    padding: 0.8em;
-    color: #483606;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.5s ease;
-    width: 50%;
-    margin-top: 1.5em;
-    font-family: 'Gilroy';
-    font-size: 1.2em;
+.contenido-articulo a:hover {
+    color: #005fa3;
 }
 
-.agregar-carrito:hover {
-    background-color: #483606;
-    color: #f1ecd6;
+.contenido-articulo ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contenido-articulo ul li {
+    font-size: 1.1em;
+    margin-bottom: 0.8em;
 }
 
 footer {
@@ -109,34 +98,32 @@ footer {
     padding: 1em;
     background-color: #c5c0a5;
     color: #483606;
-    margin-top: 2em;
-    line-height: 0;
+    margin-top: 3em;
     box-shadow: 0 0 0.4em 0 #00000073;
-    position: relative;
-    bottom: -43.84em;
 }
 
 footer p {
     margin: 0.5em 0;
-    line-height: 0.6em;
+    line-height: 1.2em;
 }
 
 /* Media Queries */
 @media (max-width: 75em) {
-    #producto-detalle {
-        flex-direction: column;
+    #medio-pago-articulo {
+        padding: 1.5em;
     }
 }
 
 @media (max-width: 56.25em) {
-    #producto-detalle {
-        flex-direction: column;
+    #medio-pago-articulo {
+        padding: 1.2em;
     }
 }
 
 @media (max-width: 37.5em) {
-    #producto-detalle {
+    #medio-pago-articulo {
         padding: 1em;
+        width: 90%;
     }
 }
 
