@@ -6,47 +6,6 @@
     <title>Papelera Pierrastegui</title>
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/inicio.css">
-    <script type="module">
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
-      import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-auth.js";
-
-      const firebaseConfig = {
-        apiKey: "AIzaSyD9T9Y34jeQUtscNdjn-aZ54B4kEisNk3c",
-        authDomain: "papelera-pie.firebaseapp.com",
-        projectId: "papelera-pie",
-        storageBucket: "papelera-pie.firebasestorage.app",
-        messagingSenderId: "407925272882",
-        appId: "1:407925272882:web:4ce4347c5cba2e95b4a72b",
-        measurementId: "G-YXB9F6CTN0"
-      };
-
-      const app = initializeApp(firebaseConfig);
-      const auth = getAuth();
-
-      document.addEventListener("DOMContentLoaded", () => {
-        onAuthStateChanged(auth, (user) => {
-          const authButtons = document.getElementById("auth-buttons");
-          const userMenu = document.getElementById("user-menu");
-
-          if (user) {
-            document.getElementById("user-name").textContent = user.displayName || "Usuario";
-            authButtons.style.display = "none"; // Ocultar botones de login y registro
-            userMenu.style.display = "block";   // Mostrar menú de usuario
-          } else {
-            authButtons.style.display = "block"; // Mostrar botones de login y registro
-            userMenu.style.display = "none";     // Ocultar menú de usuario
-          }
-        });
-
-        document.getElementById("logout").addEventListener("click", () => {
-          signOut(auth).then(() => {
-            window.location.href = "index.html"; // Recargar la página tras cerrar sesión
-          }).catch((error) => {
-            alert("Error al cerrar sesión: " + error.message);
-          });
-        });
-      });
-    </script>
 </head>
 <body>
     <header>
@@ -73,30 +32,33 @@
         </div>
         <div class="mpavisoext"><span class="mpaviso">ÚNICO MEDIO DE PAGO: MercadoPago</span> <a class="infomdp" href="info/mediodepago">Mas Información</a></div>
     </header>
-<!-- Menú de categorías como un dropdown debajo del header -->
-<div class="dropdown-container">
-  <button class="dropdown-btn" id="dropdown-btn">Categorías</button>
-  <div class="dropdown-content" id="dropdown-menu">
-      <a onclick="filtrarCategoria('arranques')">Arranques</a>
-      <a onclick="filtrarCategoria('bandejas')">Bandejas</a>
-      <a onclick="filtrarCategoria('blondas')">Blondas</a>
-      <a onclick="filtrarCategoria('bolsas')">Bolsas</a>
-      <a onclick="filtrarCategoria('cajas')">Cajas</a>
-      <a onclick="filtrarCategoria('carton')">Cartón</a>
-      <a onclick="filtrarCategoria('cintas')">Cintas</a>
-      <a onclick="filtrarCategoria('cubiertos')">Cubiertos</a>
-      <a onclick="filtrarCategoria('film')">Film</a>
-      <a onclick="filtrarCategoria('folex')">Folex</a>
-      <a onclick="filtrarCategoria('guantes')">Guantes</a>
-      <a onclick="filtrarCategoria('libreria')">Librería</a>
-      <a onclick="filtrarCategoria('papel')">Papel</a>
-      <a onclick="filtrarCategoria('pizzeria')">Pizzería</a>
-      <a onclick="filtrarCategoria('potes')">Potes</a>
-      <a onclick="filtrarCategoria('rollostermicos')">Rollos Térmicos</a>
-      <a onclick="filtrarCategoria('sorbetes')">Sorbetes</a>
-      <a onclick="filtrarCategoria('vasos')">Vasos</a>
-  </div>
-</div>
+
+    <!-- Menú de categorías como un dropdown debajo del header -->
+    <div class="dropdown-container">
+      <button class="dropdown-btn" id="dropdown-btn">Categorías</button>
+      <div class="dropdown-content" id="dropdown-menu">
+          <a onclick="filtrarCategoria('arranques')">Arranques</a>
+          <a onclick="filtrarCategoria('bandejas')">Bandejas</a>
+          <a onclick="filtrarCategoria('blondas')">Blondas</a>
+          <a onclick="filtrarCategoria('bolsas')">Bolsas</a>
+          <a onclick="filtrarCategoria('cajas')">Cajas</a>
+          <a onclick="filtrarCategoria('carton')">Cartón</a>
+          <a onclick="filtrarCategoria('cintas')">Cintas</a>
+          <a onclick="filtrarCategoria('cubiertos')">Cubiertos</a>
+          <a onclick="filtrarCategoria('film')">Film</a>
+          <a onclick="filtrarCategoria('folex')">Folex</a>
+          <a onclick="filtrarCategoria('guantes')">Guantes</a>
+          <a onclick="filtrarCategoria('libreria')">Librería</a>
+          <a onclick="filtrarCategoria('papel')">Papel</a>
+          <a onclick="filtrarCategoria('pizzeria')">Pizzería</a>
+          <a onclick="filtrarCategoria('potes')">Potes</a>
+          <a onclick="filtrarCategoria('rollostermicos')">Rollos Térmicos</a>
+          <a onclick="filtrarCategoria('sorbetes')">Sorbetes</a>
+          <a onclick="filtrarCategoria('vasos')">Vasos</a>
+          <a onclick="filtrarCategoria('todos')">Todos</a>
+      </div>
+    </div>
+
     <main>
         <section id="catalogo">
             <h2>Catálogo de Productos</h2>
@@ -105,49 +67,13 @@
             </div>
         </section>
     </main>
+
     <footer>
         <p>2025 © Papelera Pierrastegui</p>
         <p>2025 © Sol Argentino TV | Creado por los desarrolladores de Sol Argentino TV</p>
     </footer>
+
     <script src="assets/js/inicio.js"></script>
-    <script>
-        function toggleMenu() {
-            const dropdown = document.getElementById("user-dropdown");
-            dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-        }
-    </script>
-
-<script>
-  const dropdownBtn = document.getElementById("dropdown-btn");
-  const dropdownMenu = document.getElementById("dropdown-menu");
-
-  // Función para alternar el menú
-  function toggleDropdown(event) {
-      event.stopPropagation(); // Evita que el click se propague al documento
-      const isOpen = dropdownMenu.style.display === "block";
-      
-      // Alternar visibilidad del menú
-      dropdownMenu.style.display = isOpen ? "none" : "block";
-      
-      // Alternar clase para rotar la flecha
-      dropdownBtn.classList.toggle("open", !isOpen);
-  }
-
-  dropdownBtn.addEventListener("click", toggleDropdown);
-
-  // Cerrar el dropdown al hacer click fuera de él
-  document.addEventListener("click", function(event) {
-      if (!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
-          dropdownMenu.style.display = "none";
-          dropdownBtn.classList.remove("open"); // Restablecer la flecha
-      }
-  });
-
-  function filtrarCategoria(categoria) {
-      console.log("Cargar productos de la categoría:", categoria);
-      dropdownMenu.style.display = "none"; // Cierra el dropdown al seleccionar una categoría
-      dropdownBtn.classList.remove("open"); // Restablecer la flecha
-  }
-</script>
+    <script src="assets/js/iniciodropdown.js"></script>
 </body>
 </html>
