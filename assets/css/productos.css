@@ -49,7 +49,7 @@ nav ul li a {
     background: #f1ecd6;
     width: 66em;
     position: absolute;
-    margin-left: 29em;
+    margin-left: 25em;
     margin-top: 10em;
     border-radius: 0.3em;
 }
@@ -129,12 +129,16 @@ footer p {
 @media (max-width: 75em) {
     #producto-detalle {
         flex-direction: column;
+        margin-left: 4em;
+        width: 46em;
     }
 }
 
 @media (max-width: 56.25em) {
     #producto-detalle {
         flex-direction: column;
+        width: 35em;
+        margin-left: 2em;!em;!e;!;
     }
 }
 

@@ -158,18 +158,50 @@ footer p {
     #medio-pago-articulo {
         padding: 2em;
     }
+    
+    .contacto-info a {
+        color: #483606;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s ease;
+    }
 }
 
 @media (max-width: 56.25em) {
     #medio-pago-articulo {
         padding: 1.5em;
     }
+
+    .contacto-info a {
+    color: #483606;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.contacto-info a {
+    color: #483606;
+    text-decoration: none;
+    font-weight: 700;
+    transition: color 0.3s ease;
+    margin-bottom: -5em;
+    line-height: 1.3em;
+}
 }
 
 @media (max-width: 37.5em) {
     #medio-pago-articulo {
         padding: 1.2em;
         width: 95%;
+    }
+
+    .contacto-info a {
+        color: #483606;
+        text-decoration: none;
+        font-weight: 700;
+        transition: color 0.3s ease;
+        line-height: 2;
+        margin-bottom: -36em;
     }
 }
 
