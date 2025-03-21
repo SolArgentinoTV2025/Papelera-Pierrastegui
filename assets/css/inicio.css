@@ -250,17 +250,21 @@ footer {
     transition: background-color 0.3s ease;
     border: 2px solid #483606;
     font-family: 'Gilroy';
-    padding: 0.2em 2.53em;
+    padding: 0 3.2em 0 3.2em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     position: relative;
+}
+
+p.textocat {
+    all: unset;
 }
 
 /* Flecha usando ::after */
 .dropdown-btn::after {
     content: "▼"; /* Flecha hacia abajo por defecto */
     position: absolute;
-    right: 1em;
+    right: 1.2em;
     transition: transform 0.3s ease;
 }
 
