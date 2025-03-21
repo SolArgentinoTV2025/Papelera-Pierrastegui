@@ -116,5 +116,29 @@
             dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
         }
     </script>
+
+    <script>
+    const dropdownBtn = document.getElementById("dropdown-btn");
+    const dropdownMenu = document.getElementById("dropdown-menu");
+
+    // Función para alternar el menú
+    function toggleDropdown() {
+        dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
+    }
+
+    dropdownBtn.addEventListener("click", toggleDropdown);
+
+    // Cerrar el dropdown al hacer click fuera de él o al seleccionar una categoría
+    document.addEventListener("click", function(event) {
+        if (!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.style.display = "none";
+        }
+    });
+
+    function filtrarCategoria(categoria) {
+        console.log("Cargar productos de la categoría:", categoria);
+        dropdownMenu.style.display = "none"; // Cierra el dropdown al seleccionar una categoría
+    }
+</script>
 </body>
 </html>

@@ -215,6 +215,20 @@ footer {
     border-radius: 6px;
   }
 
+/* Scrollbar personalizada */
+  .dropdown-content::-webkit-scrollbar {
+    width: 5px; /* Grosor de la barra de desplazamiento */
+  }
+  
+  .dropdown-content::-webkit-scrollbar-track {
+    background: #f1ecd600; /* Color de fondo de la barra de desplazamiento */
+  }
+  
+  .dropdown-content::-webkit-scrollbar-thumb {
+    background: #ffff; /* Color del "agarre" de la barra de desplazamiento */
+    border-radius: 0.5em;
+  }
+
 /* Contenedor del dropdown */
 .dropdown-container {
     position: relative;
@@ -226,21 +240,25 @@ footer {
 
 /* Botón del dropdown */
 .dropdown-btn {
-    background-color: #c5c0a5;
+    background-color: #f1ecd6;
     color: #483606;
-    padding: 0.8em 2em;
     font-size: 1.2em;
-    border: none;
     cursor: pointer;
     font-weight: 700;
     border-radius: 0.5em;
     transition: background-color 0.3s ease;
+    border: 2px solid #483606;
+    font-family: 'Gilroy';
+    padding-left: 2.53em;
+    padding-right: 2.53em;
+    padding-bottom: 0.2em;
+    padding-top: 0.2em;
 }
 
 /* Cambio de color al pasar el ratón sobre el botón */
 .dropdown-btn:hover {
     background-color: #483606;
-    color: #c5c0a5;
+    color: #f1ecd6;
 }
 
 /* Contenido del dropdown (inicialmente oculto) */
@@ -255,6 +273,8 @@ footer {
     top: 100%; /* Ubicado justo debajo del botón */
     left: 50%;
     transform: translateX(-50%); /* Centrado horizontal */
+    overflow-y: auto;
+    height: 19em;
 }
 
 /* Estilo para los enlaces dentro del dropdown */
@@ -269,7 +289,7 @@ footer {
 /* Estilo al pasar el ratón sobre los enlaces del dropdown */
 .dropdown-content a:hover {
     background-color: #483606;
-    color: #c5c0a5;
+    color: #f1ecd6;
 }
 
 /* Mostrar el dropdown cuando se hace hover sobre el botón */
