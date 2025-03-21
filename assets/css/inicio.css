@@ -215,64 +215,90 @@ footer {
     border-radius: 6px;
   }
 
-  /* Estilo para el menú de categorías */
-#categories-nav {
-    background-color: #f8f8f8;
-    padding: 1em 0;
-    box-shadow: 0 0 0.2em 0 #00000073;
-}
-
-#categories-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-#categories-nav li {
-    display: inline;
-    margin: 0 1em;
+/* Contenedor del dropdown */
+.dropdown-container {
     position: relative;
+    display: inline-block;
+    margin-top: 2em;
+    width: 100%;
+    text-align: center;
 }
 
-#categories-nav a {
-    text-decoration: none;
+/* Botón del dropdown */
+.dropdown-btn {
+    background-color: #c5c0a5;
     color: #483606;
-    padding: 0.5em 1em;
-    display: block;
+    padding: 0.8em 2em;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
     font-weight: 700;
-    font-size: 1.1em;
-    transition: background 0.3s ease;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease;
 }
 
-#categories-nav a:hover {
+/* Cambio de color al pasar el ratón sobre el botón */
+.dropdown-btn:hover {
     background-color: #483606;
     color: #c5c0a5;
-    border-radius: 0.5em;
 }
 
-/* Media Queries para menú de categorías responsivo */
+/* Contenido del dropdown (inicialmente oculto) */
+.dropdown-content {
+    display: none; /* El dropdown está oculto inicialmente */
+    position: absolute;
+    background-color: #f1ecd6;
+    min-width: 200px;
+    border-radius: 0.5em;
+    box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    top: 100%; /* Ubicado justo debajo del botón */
+    left: 50%;
+    transform: translateX(-50%); /* Centrado horizontal */
+}
+
+/* Estilo para los enlaces dentro del dropdown */
+.dropdown-content a {
+    color: #483606;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+}
+
+/* Estilo al pasar el ratón sobre los enlaces del dropdown */
+.dropdown-content a:hover {
+    background-color: #483606;
+    color: #c5c0a5;
+}
+
+/* Mostrar el dropdown cuando se hace hover sobre el botón */
+.dropdown-container:hover .dropdown-content {
+    display: block;
+}
+
+/* Media Queries para que el dropdown sea responsivo */
 @media (max-width: 75em) { /* 1200px */
-    #categories-nav a {
-        font-size: 1em;
-        padding: 0.5em 0.8em;
+    .dropdown-btn {
+        font-size: 1.1em;
+        padding: 0.7em 1.8em;
     }
 }
 
 @media (max-width: 56.25em) { /* 900px */
-    #categories-nav a {
-        font-size: 0.9em;
+    .dropdown-btn {
+        font-size: 1em;
+        padding: 0.6em 1.5em;
     }
 }
 
 @media (max-width: 37.5em) { /* 600px */
-    #categories-nav {
-        padding: 0.5em 0;
+    .dropdown-btn {
+        font-size: 0.9em;
+        padding: 0.5em 1.2em;
     }
 
-    #categories-nav a {
-        font-size: 0.8em;
-        padding: 0.5em;
+    .dropdown-content {
+        min-width: 150px;
     }
 }
