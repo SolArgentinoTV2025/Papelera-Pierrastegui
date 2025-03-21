@@ -74,27 +74,27 @@
         <div class="mpavisoext"><span class="mpaviso">ÚNICO MEDIO DE PAGO: MercadoPago</span> <a class="infomdp" href="info/mediodepago">Mas Información</a></div>
     </header>
 <!-- Menú de categorías como un dropdown debajo del header -->
-<div class="dropdown-container">
-  <button class="dropdown-btn">Categorías</button>
-  <div class="dropdown-content">
-      <a href="#">Arranques</a>
-      <a href="#">Bandejas</a>
-      <a href="#">Blondas</a>
-      <a href="#">Bolsas</a>
-      <a href="#">Cajas</a>
-      <a href="#">Cartón</a>
-      <a href="#">Cintas</a>
-      <a href="#">Cubiertos</a>
-      <a href="#">Film</a>
-      <a href="#">Folex</a>
-      <a href="#">Guantes</a>
-      <a href="#">Librería</a>
-      <a href="#">Papel</a>
-      <a href="#">Pizzería</a>
-      <a href="#">Potes</a>
-      <a href="#">Rollos Térmicos</a>
-      <a href="#">Sorbetes</a>
-      <a href="#">Vasos</a>
+<div class="dropdown">
+  <button class="dropbtn" id="dropdown-btn">Categorías ▼</button>
+  <div class="dropdown-content" id="dropdown-menu">
+      <button onclick="filtrarCategoria('arranques')">Arranques</button>
+      <button onclick="filtrarCategoria('bandejas')">Bandejas</button>
+      <button onclick="filtrarCategoria('blondas')">Blondas</button>
+      <button onclick="filtrarCategoria('bolsas')">Bolsas</button>
+      <button onclick="filtrarCategoria('cajas')">Cajas</button>
+      <button onclick="filtrarCategoria('carton')">Cartón</button>
+      <button onclick="filtrarCategoria('cintas')">Cintas</button>
+      <button onclick="filtrarCategoria('cubiertos')">Cubiertos</button>
+      <button onclick="filtrarCategoria('film')">Film</button>
+      <button onclick="filtrarCategoria('folex')">Folex</button>
+      <button onclick="filtrarCategoria('guantes')">Guantes</button>
+      <button onclick="filtrarCategoria('libreria')">Librería</button>
+      <button onclick="filtrarCategoria('papel')">Papel</button>
+      <button onclick="filtrarCategoria('pizzeria')">Pizzería</button>
+      <button onclick="filtrarCategoria('potes')">Potes</button>
+      <button onclick="filtrarCategoria('rollostermicos')">Rollos Térmicos</button>
+      <button onclick="filtrarCategoria('sorbetes')">Sorbetes</button>
+      <button onclick="filtrarCategoria('vasos')">Vasos</button>
   </div>
 </div>
     <main>
@@ -117,28 +117,29 @@
         }
     </script>
 
-    <script>
-    const dropdownBtn = document.getElementById("dropdown-btn");
-    const dropdownMenu = document.getElementById("dropdown-menu");
+<script>
+  const dropdownBtn = document.getElementById("dropdown-btn");
+  const dropdownMenu = document.getElementById("dropdown-menu");
 
-    // Función para alternar el menú
-    function toggleDropdown() {
-        dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
-    }
+  // Función para alternar el menú
+  function toggleDropdown(event) {
+      event.stopPropagation(); // Evita que el click se propague al documento
+      dropdownMenu.style.display = (dropdownMenu.style.display === "block") ? "none" : "block";
+  }
 
-    dropdownBtn.addEventListener("click", toggleDropdown);
+  dropdownBtn.addEventListener("click", toggleDropdown);
 
-    // Cerrar el dropdown al hacer click fuera de él o al seleccionar una categoría
-    document.addEventListener("click", function(event) {
-        if (!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
-            dropdownMenu.style.display = "none";
-        }
-    });
+  // Cerrar el dropdown al hacer click fuera de él
+  document.addEventListener("click", function(event) {
+      if (!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.style.display = "none";
+      }
+  });
 
-    function filtrarCategoria(categoria) {
-        console.log("Cargar productos de la categoría:", categoria);
-        dropdownMenu.style.display = "none"; // Cierra el dropdown al seleccionar una categoría
-    }
+  function filtrarCategoria(categoria) {
+      console.log("Cargar productos de la categoría:", categoria);
+      dropdownMenu.style.display = "none"; // Cierra el dropdown al seleccionar una categoría
+  }
 </script>
 </body>
 </html>
