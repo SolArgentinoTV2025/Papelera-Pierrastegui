@@ -209,6 +209,42 @@ footer {
 @media (max-width: 75em) { /* 1200px */
     .producto {
         width: calc(25% - -26em);
+        margin-left: -4em;
+    }
+
+.mpavisoext {
+    margin-left: 67em;!;!e;!em;!e;!;
+    margin-top: -1em;
+    position: absolute;
+}
+
+    .mpaviso {
+        font-weight: 700;
+        position: absolute;
+        margin-left: -57em;
+        margin-top: -7em;
+        background: #483606;
+        color: #c5c0a5;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        border: 4px solid #483606;
+        border-top-left-radius: 0.2em;
+        border-bottom-left-radius: 0.2em;
+    }
+    
+    .mpaviso::after {
+        content: '⚠️';
+        position: absolute;
+        margin-left: 0.3em !important;!im;!imo;!imop;!i;!;
+    }
+    
+    .mpaviso::before, .mpaviso::after {
+        content: '⚠️';
+        position: absolute;
+        margin-left: -1.5em;
+        margin-top: -0.1em;
     }
 }
 
@@ -217,12 +253,69 @@ footer {
         width: calc(33.33% - -4em);
         margin-left: -1em;
     }
+        .mpaviso {
+        font-weight: 700;
+        position: absolute;
+        margin-left: -57em;
+        margin-top: -7em;
+        background: #483606;
+        color: #c5c0a5;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        border: 4px solid #483606;
+        border-top-left-radius: 0.2em;
+        border-bottom-left-radius: 0.2em;
+    }
+    
+    .mpaviso::after {
+        content: '⚠️';
+        position: absolute;
+        margin-left: 0.3em !important;!im;!imo;!imop;!i;!;
+    }
+    
+    .mpaviso::before, .mpaviso::after {
+        content: '⚠️';
+        position: absolute;
+        margin-left: -1.5em;
+        margin-top: -0.1em;
+    }
 }
 
 @media (max-width: 37.5em) { /* 600px */
     .producto {
         width: calc(50% - -4em);
         margin-left: -6em;
+    }
+
+    .mpaviso {
+        font-weight: 700;
+        position: absolute;
+        margin-left: -57em;
+        margin-top: -7em;
+        background: #483606;
+        color: #c5c0a5;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        border: 4px solid #483606;
+        border-top-left-radius: 0.2em;
+        border-bottom-left-radius: 0.2em;
+    }
+    
+    .mpaviso::after {
+        content: '⚠️';
+        position: absolute;
+        margin-left: 0.3em !important;!im;!imo;!imop;!i;!;
+    }
+    
+    .mpaviso::before, .mpaviso::after {
+        content: '⚠️';
+        position: absolute;
+        margin-left: -1.5em;
+        margin-top: -0.1em;
     }
 }
 
@@ -231,12 +324,72 @@ footer {
         width: calc(100% - -25em);
         margin-left: -14.3em;
     }
+
+    .mpaviso {
+        font-weight: 700;
+        position: absolute;
+        margin-left: -57em;
+        margin-top: -7em;
+        background: #483606;
+        color: #c5c0a5;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        border: 4px solid #483606;
+        border-top-left-radius: 0.2em;
+        border-bottom-left-radius: 0.2em;
+    }
+    
+    .mpaviso::after {
+        content: '⚠️';
+        position: absolute;
+        margin-left: 0.3em !important;!im;!imo;!imop;!i;!;
+    }
+    
+    .mpaviso::before, .mpaviso::after {
+        content: '⚠️';
+        position: absolute;
+        margin-left: -1.5em;
+        margin-top: -0.1em;
+    }
 }
 
 @media (max-width: 383px) { /* 400px */
     .producto {
-        width: calc(100% - -12em);
-        margin-left: -9.3em;
+        width: calc(100% - -7em);
+        margin-left: -9.8em;
+        position: relative;
+        left: -0.5em;
+    }
+
+    .mpaviso {
+        font-weight: 700;
+        position: absolute;
+        margin-left: -57em;
+        margin-top: -7em;
+        background: #483606;
+        color: #c5c0a5;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 0.3em;
+        padding-bottom: 0.3em;
+        border: 4px solid #483606;
+        border-top-left-radius: 0.2em;
+        border-bottom-left-radius: 0.2em;
+    }
+    
+    .mpaviso::after {
+        content: '⚠️';
+        position: absolute;
+        margin-left: 0.3em !important;!im;!imo;!imop;!i;!;
+    }
+    
+    .mpaviso::before, .mpaviso::after {
+        content: '⚠️';
+        position: absolute;
+        margin-left: -1.5em;
+        margin-top: -0.1em;
     }
 }
 
