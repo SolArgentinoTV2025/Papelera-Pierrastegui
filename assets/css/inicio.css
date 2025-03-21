@@ -214,3 +214,65 @@ footer {
     background: #ffff; /* Color del "agarre" de la barra de desplazamiento */
     border-radius: 6px;
   }
+
+  /* Estilo para el menú de categorías */
+#categories-nav {
+    background-color: #f8f8f8;
+    padding: 1em 0;
+    box-shadow: 0 0 0.2em 0 #00000073;
+}
+
+#categories-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+#categories-nav li {
+    display: inline;
+    margin: 0 1em;
+    position: relative;
+}
+
+#categories-nav a {
+    text-decoration: none;
+    color: #483606;
+    padding: 0.5em 1em;
+    display: block;
+    font-weight: 700;
+    font-size: 1.1em;
+    transition: background 0.3s ease;
+}
+
+#categories-nav a:hover {
+    background-color: #483606;
+    color: #c5c0a5;
+    border-radius: 0.5em;
+}
+
+/* Media Queries para menú de categorías responsivo */
+@media (max-width: 75em) { /* 1200px */
+    #categories-nav a {
+        font-size: 1em;
+        padding: 0.5em 0.8em;
+    }
+}
+
+@media (max-width: 56.25em) { /* 900px */
+    #categories-nav a {
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 37.5em) { /* 600px */
+    #categories-nav {
+        padding: 0.5em 0;
+    }
+
+    #categories-nav a {
+        font-size: 0.8em;
+        padding: 0.5em;
+    }
+}
