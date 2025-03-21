@@ -211,7 +211,7 @@ footer {
   }
   
   ::-webkit-scrollbar-thumb {
-    background: #ffff; /* Color del "agarre" de la barra de desplazamiento */
+    background: #ffffff; /* Color del "agarre" de la barra de desplazamiento */
     border-radius: 6px;
   }
 
@@ -225,8 +225,9 @@ footer {
 }
   
 .dropdown-content::-webkit-scrollbar-thumb {
-    background: #ffff;
+    background: #ffffff00 !important;!i;!;!imo;!imo;!i;!;
     border-radius: 0.5em;
+    padding-bottom: 1em;
 }
 
 /* Contenedor del dropdown */
@@ -238,7 +239,7 @@ footer {
     text-align: center;
 }
 
-/* Botón del dropdown */
+/* Botón con flecha */
 .dropdown-btn {
     background-color: #f1ecd6;
     color: #483606;
@@ -250,6 +251,22 @@ footer {
     border: 2px solid #483606;
     font-family: 'Gilroy';
     padding: 0.2em 2.53em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    position: relative;
+}
+
+/* Flecha usando ::after */
+.dropdown-btn::after {
+    content: "▼"; /* Flecha hacia abajo por defecto */
+    position: absolute;
+    right: 1em;
+    transition: transform 0.3s ease;
+}
+
+/* Clase que gira la flecha */
+.dropdown-btn.open::after {
+    transform: rotate(180deg);
 }
 
 /* Cambio de color al pasar el ratón sobre el botón */
@@ -258,20 +275,27 @@ footer {
     color: #f1ecd6;
 }
 
-/* Contenido del dropdown (inicialmente oculto) */
 .dropdown-content {
-    display: none; /* Ahora solo se muestra al hacer clic */
+    display: none;
     position: absolute;
     background-color: #f1ecd6;
-    min-width: 200px;
+    min-width: 222px;
     border-radius: 0.5em;
     box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.2);
     z-index: 1;
-    top: 100%;
-    left: 50%;
+    top: 119%;
+    left: 49.98%;
     transform: translateX(-50%);
-    overflow-y: auto;
+    overflow-y: auto; /* Permite scroll si hay muchas categorías */
     height: 19em;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer/Edge */
+    border: 2px solid #483606;
+}
+
+/* Oculta scrollbar en WebKit (Chrome, Safari) */
+.dropdown-content::-webkit-scrollbar {
+    display: none;
 }
 
 /* Estilo para los enlaces dentro del dropdown */
