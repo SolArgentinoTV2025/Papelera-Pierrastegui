@@ -216,18 +216,18 @@ footer {
   }
 
 /* Scrollbar personalizada */
-  .dropdown-content::-webkit-scrollbar {
-    width: 5px; /* Grosor de la barra de desplazamiento */
-  }
+.dropdown-content::-webkit-scrollbar {
+    width: 5px;
+}
   
-  .dropdown-content::-webkit-scrollbar-track {
-    background: #f1ecd600; /* Color de fondo de la barra de desplazamiento */
-  }
+.dropdown-content::-webkit-scrollbar-track {
+    background: transparent;
+}
   
-  .dropdown-content::-webkit-scrollbar-thumb {
-    background: #ffff; /* Color del "agarre" de la barra de desplazamiento */
+.dropdown-content::-webkit-scrollbar-thumb {
+    background: #ffff;
     border-radius: 0.5em;
-  }
+}
 
 /* Contenedor del dropdown */
 .dropdown-container {
@@ -249,10 +249,7 @@ footer {
     transition: background-color 0.3s ease;
     border: 2px solid #483606;
     font-family: 'Gilroy';
-    padding-left: 2.53em;
-    padding-right: 2.53em;
-    padding-bottom: 0.2em;
-    padding-top: 0.2em;
+    padding: 0.2em 2.53em;
 }
 
 /* Cambio de color al pasar el ratón sobre el botón */
@@ -263,16 +260,16 @@ footer {
 
 /* Contenido del dropdown (inicialmente oculto) */
 .dropdown-content {
-    display: none; /* El dropdown está oculto inicialmente */
+    display: none; /* Ahora solo se muestra al hacer clic */
     position: absolute;
     background-color: #f1ecd6;
     min-width: 200px;
     border-radius: 0.5em;
     box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.2);
     z-index: 1;
-    top: 100%; /* Ubicado justo debajo del botón */
+    top: 100%;
     left: 50%;
-    transform: translateX(-50%); /* Centrado horizontal */
+    transform: translateX(-50%);
     overflow-y: auto;
     height: 19em;
 }
@@ -284,6 +281,7 @@ footer {
     text-decoration: none;
     display: block;
     font-weight: 600;
+    cursor: pointer;
 }
 
 /* Estilo al pasar el ratón sobre los enlaces del dropdown */
@@ -292,27 +290,22 @@ footer {
     color: #f1ecd6;
 }
 
-/* Mostrar el dropdown cuando se hace hover sobre el botón */
-.dropdown-container:hover .dropdown-content {
-    display: block;
-}
-
-/* Media Queries para que el dropdown sea responsivo */
-@media (max-width: 75em) { /* 1200px */
+/* Media Queries */
+@media (max-width: 75em) {
     .dropdown-btn {
         font-size: 1.1em;
         padding: 0.7em 1.8em;
     }
 }
 
-@media (max-width: 56.25em) { /* 900px */
+@media (max-width: 56.25em) {
     .dropdown-btn {
         font-size: 1em;
         padding: 0.6em 1.5em;
     }
 }
 
-@media (max-width: 37.5em) { /* 600px */
+@media (max-width: 37.5em) {
     .dropdown-btn {
         font-size: 0.9em;
         padding: 0.5em 1.2em;
