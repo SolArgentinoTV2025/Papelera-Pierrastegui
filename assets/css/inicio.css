@@ -140,6 +140,20 @@ nav ul li a {
     font-weight: 700;
 }
 
+/* Estilos para la navegación en móviles */
+.nav-menu {
+    display: none; /* Ocultar el menú por defecto en móviles */
+    flex-direction: column;
+    align-items: center;
+    background: #c5c0a5;
+    padding: 1em 0;
+    position: absolute;
+    width: 100%;
+    top: 60px;
+    left: 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 #catalogo {
     padding: 2em;
     color: #483606;
@@ -194,25 +208,35 @@ footer {
 /* Media Queries para diseÃ±o responsivo */
 @media (max-width: 75em) { /* 1200px */
     .producto {
-        width: calc(25% - 2em);
+        width: calc(25% - -26em);
     }
 }
 
 @media (max-width: 56.25em) { /* 900px */
     .producto {
-        width: calc(33.33% - 2em);
+        width: calc(33.33% - -4em);
+        margin-left: -1em;
     }
 }
 
 @media (max-width: 37.5em) { /* 600px */
     .producto {
-        width: calc(50% - 2em);
+        width: calc(50% - -4em);
+        margin-left: -6em;
     }
 }
 
 @media (max-width: 25em) { /* 400px */
     .producto {
-        width: calc(100% - 2em);
+        width: calc(100% - -25em);
+        margin-left: -14.3em;
+    }
+}
+
+@media (max-width: 383px) { /* 400px */
+    .producto {
+        width: calc(100% - -12em);
+        margin-left: -9.3em;
     }
 }
 
@@ -376,4 +400,46 @@ p.textocat {
 .btn-ver-producto:hover {
     background-color: #483606;
     color: #f1ecd6;
+}
+
+/* Estilos para el botón de menú en dispositivos móviles */
+.menu-toggle {
+    display: none; /* Ocultar en pantallas grandes */
+    background: #483606;
+    color: #c5c0a5;
+    border: none;
+    font-size: 1.2em;
+    cursor: pointer;
+    font-weight: 700;
+    text-align: center;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    width: 2.4em;
+    margin-left: 12.5em;
+}
+
+.menu-toggle:hover {
+    background: #c5c0a5;
+    color: #483606;
+}
+
+/* Media Query para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: none; /* Ocultar el menú normal en móviles */
+    }
+}
+
+.nav-menu.active {
+    display: flex; /* Mostrar cuando esté activo */
+}
+
+.nav-menu li {
+    margin: 10px 0;
 }

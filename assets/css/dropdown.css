@@ -29,13 +29,14 @@
     display: none;
     position: absolute;
     background-color: #f1ecd6;
-    border: 1px solid #483606;
+    border: 2px solid #483606;
     width: 83%;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     overflow: auto;
     z-index: 10;
     margin-top: 0.3em;
+    height: 20em;
 }
 
 .dropdown-menu.show {
@@ -59,4 +60,18 @@
 .dropdown-menu li:hover {
     background-color: #483606;
     color: #f1ecd6;
+}
+
+/* Scrollbar personalizada */
+.dropdown-menu::-webkit-scrollbar {
+    width: 0px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+    background: #c5c0a500;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+    background: #ffffff00;
+    border-radius: 0px;
 }
