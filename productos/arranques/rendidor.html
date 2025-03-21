@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Papelera Pierrastegui - Arranque Rendidor</title>
-    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="../../assets/css/productos.css">
     <link rel="stylesheet" href="../../assets/css/dropdown.css">
 </head>
@@ -54,29 +54,6 @@
         <p>2025 © Sol Argentino TV | Creado por los desarrolladores de Sol Argentino TV</p>
     </footer>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const dropdownBtn = document.querySelector(".dropdown-btn");
-            const dropdownMenu = document.querySelector(".dropdown-menu");
-            const sizeOptions = document.querySelectorAll(".dropdown-menu li");
-            
-            dropdownBtn.addEventListener("click", function() {
-                dropdownMenu.classList.toggle("show");
-            });
-            
-            sizeOptions.forEach(option => {
-                option.addEventListener("click", function() {
-                    dropdownBtn.textContent = `Tamaño: ${this.dataset.size}`;
-                    dropdownMenu.classList.remove("show");
-                });
-            });
-            
-            document.addEventListener("click", function(event) {
-                if (!dropdownBtn.contains(event.target) && !dropdownMenu.contains(event.target)) {
-                    dropdownMenu.classList.remove("show");
-                }
-            });
-        });
-    </script>
+    <script src="../../assets/js/dropdown.js"></script>
 </body>
 </html>
