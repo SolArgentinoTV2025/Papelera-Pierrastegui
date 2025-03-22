@@ -331,6 +331,19 @@ footer {
         }
 }
 
+@media (max-width: 90em) {
+    .producto img {
+        width: 38.2em;
+        margin-bottom: 1em;
+        margin-left: -1em;
+        margin-top: -1em;
+        height: 12em;
+        border-top-left-radius: 0.5em;
+        border-top-right-radius: 0.5em;
+        object-fit: cover;
+        }
+}
+
 @media (max-width: 37.5em) { /* 600px */
     .producto {
         width: calc(50% - -4em);
