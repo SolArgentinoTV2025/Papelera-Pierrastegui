@@ -15,25 +15,6 @@ html, body {
     background-size: contain;
 }
 
-a.logotext1:visited {!i;!;text-decoration: none;color: #02a22a;}
-
-.logotext1 {
-    color: #02a22a;
-    text-decoration: none;
-}
-
-a.logotext1:hover {
-    a.logotext1: hover {
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
-};
-    #00ff94: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
-    color: #034914;
-}
-
-.logotext1:focus {
-    all: unset;
-}
-
 header {
     background-color: #fff;
     color: #02a22a;!;!i;!;!;
@@ -863,8 +844,8 @@ a.btn-ver-producto {}
     right: 0.29em;
     top: 50.1%;
     transform: translateY(-50%);
-    padding-top: 0.24em;
-    padding-bottom: 0.21em;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
     border-top-right-radius: 0.3em;
     border-bottom-right-radius: 0.3em;
     border-top-left-radius: 0em !important;!i;!;
