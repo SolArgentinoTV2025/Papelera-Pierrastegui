@@ -15,6 +15,24 @@ html, body {
     background-size: contain;
 }
 
+a.logotext1:visited {
+    text-decoration: none;
+    color: #02a22a;
+}
+
+.logotext1 {
+    color: #02a22a;
+    text-decoration: none;
+}
+
+a.logotext1:hover {
+    color: #034914;
+}
+
+.logotext1:focus {
+    all: unset;
+}
+
 header {
     background-color: #fff;
     color: #02a22a;!;!i;!;!;
@@ -44,10 +62,6 @@ header h1 {
     url(
     url(https://papelerapierrastegui.com.ar/assets/images/favicon.png));
 }
-
-h1 {}
-
-h1 {}
 
 main {
     flex: 1; /* Hace que el contenido principal crezca y empuje el footer hacia abajo */
@@ -844,8 +858,8 @@ a.btn-ver-producto {}
     right: 0.29em;
     top: 50.1%;
     transform: translateY(-50%);
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding-top: 0.24em;
+    padding-bottom: 0.21em;
     border-top-right-radius: 0.3em;
     border-bottom-right-radius: 0.3em;
     border-top-left-radius: 0em !important;!i;!;
