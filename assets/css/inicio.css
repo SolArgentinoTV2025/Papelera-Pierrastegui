@@ -576,7 +576,8 @@ footer {
   }
   
   ::-webkit-scrollbar-track {
-    background: #fff; /* Color de fondo de la barra de desplazamiento */
+    background-image: url(https://img.freepik.com/foto-gratis/muro-hormigon-texturizado_53876-89536.jpg);
+    background-size: cover; /* Color de fondo de la barra de desplazamiento */
   }
   
   ::-webkit-scrollbar-thumb {
