@@ -980,3 +980,7 @@ a.btn-ver-producto {}
 .droptmn-menu::-webkit-scrollbar-thumb {
     background: transparent; /* Invisible */
 }
+
+.logo1 {
+    cursor: pointer;
+}
