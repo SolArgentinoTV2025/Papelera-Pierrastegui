@@ -12,6 +12,7 @@ html, body {
     font-size: 1em;
     overflow-x: hidden; /* Bloquea el desbordamiento horizontal */
     background-image: url(https://img.freepik.com/foto-gratis/muro-hormigon-texturizado_53876-89536.jpg);
+    background-size: contain;
 }
 
 header {
@@ -189,15 +190,20 @@ nav ul li a {
     left: 25.6em;
     font-size: 22px;
     font-family: FONTAWESOME;
-    color: #fff;
+    color: #02a22a;
     border: 4px solid #02a22a;
     padding-top: 0.4em;!em;!em;!e;!;
     padding-left: 0.3em;
     padding-right: 0.3em;
     padding-bottom: 0.3em;
-    background: #ffffff00;
+    background: #ffffff;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.carrito:hover {
+    color: #fff;
+    background: #02a22a;
 }
 
 /* Estilos para el menú desplegable */
