@@ -148,16 +148,29 @@ document.querySelector('.menu-toggle').addEventListener('click', function() {
     document.querySelector('.nav-menu').classList.toggle('active');
 });
 
-function filtrarProductos() {
-    const input = document.getElementById('buscador').value.toLowerCase();
-    const productosDiv = document.querySelectorAll('.productos');
-
-    productosDiv.forEach(function(productoDiv) {
-        const nombreProducto = productoDiv.getAttribute('data-nombre').toLowerCase(); // Obtener el nombre del producto
-        if (nombreProducto.includes(input)) {
-            productoDiv.style.display = ''; // Mostrar el producto si coincide
-        } else {
-            productoDiv.style.display = 'none'; // Ocultar el producto si no coincide
-        }
+// Función para mostrar los productos en el catálogo
+function mostrarProductos(productosFiltrados) {
+    const productosContainer = document.getElementById('productos');
+    productosContainer.innerHTML = '';  // Limpiar productos existentes
+    productosFiltrados.forEach(producto => {
+        const productoDiv = document.createElement('div');
+        productoDiv.classList.add('producto');
+        productoDiv.innerHTML = `<p>${producto.nombre}</p>`;
+        productosContainer.appendChild(productoDiv);
     });
 }
+
+// Función para filtrar productos
+function filtrarProductos() {
+    const searchTerm = document.getElementById('buscador').value.toLowerCase();
+    const productosFiltrados = productos.filter(producto => 
+        producto.nombre.toLowerCase().includes(searchTerm)
+    );
+    mostrarProductos(productosFiltrados);
+}
+
+// Ejecutar la búsqueda al hacer clic en la lupa
+document.getElementById('search-button').addEventListener('click', filtrarProductos);
+
+// Mostrar todos los productos al cargar la página
+mostrarProductos(productos);
