@@ -15,6 +15,25 @@ html, body {
     background-size: contain;
 }
 
+a.logotext1:visited {!i;!;text-decoration: none;color: #02a22a;}
+
+.logotext1 {
+    color: #02a22a;
+    text-decoration: none;
+}
+
+a.logotext1:hover {
+    a.logotext1: hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+};
+    #00ff94: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+    color: #034914;
+}
+
+.logotext1:focus {
+    all: unset;
+}
+
 header {
     background-color: #fff;
     color: #02a22a;!;!i;!;!;
