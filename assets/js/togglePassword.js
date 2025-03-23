@@ -8,12 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
             // Verificar si el evento está siendo disparado
             console.log(`Hiciste clic en el ícono de visibilidad para: ${targetId}`);
 
+            // Alternar la visibilidad de la contraseña
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
-                this.textContent = "🙈"; // Cambia el icono a un ícono de ocultar
+                this.src = "../images/ojoa.png"; // Cambia la imagen a ojo abierto (mostrar)
             } else {
                 passwordInput.type = "password";
-                this.textContent = "👁️"; // Cambia el icono a un ícono de mostrar
+                this.src = "../images/ojoc.png"; // Cambia la imagen a ojo cerrado (ocultar)
             }
         });
     });
