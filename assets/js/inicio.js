@@ -147,3 +147,17 @@ function cargarProductos() {
 document.querySelector('.menu-toggle').addEventListener('click', function() {
     document.querySelector('.nav-menu').classList.toggle('active');
 });
+
+function filtrarProductos() {
+    const input = document.getElementById('buscador').value.toLowerCase();
+    const productosDiv = document.querySelectorAll('.productos');
+
+    productosDiv.forEach(function(productoDiv) {
+        const nombreProducto = productoDiv.getAttribute('data-nombre').toLowerCase(); // Obtener el nombre del producto
+        if (nombreProducto.includes(input)) {
+            productoDiv.style.display = ''; // Mostrar el producto si coincide
+        } else {
+            productoDiv.style.display = 'none'; // Ocultar el producto si no coincide
+        }
+    });
+}

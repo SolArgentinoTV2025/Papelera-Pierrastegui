@@ -1,6 +1,6 @@
 function filtrarProductos() {
     const input = document.getElementById('buscador').value.toLowerCase();
-    const productosDiv = document.querySelectorAll('.producto');
+    const productosDiv = document.querySelectorAll('.productos');
 
     productosDiv.forEach(function(productoDiv) {
         const nombreProducto = productoDiv.getAttribute('data-nombre').toLowerCase(); // Obtener el nombre del producto

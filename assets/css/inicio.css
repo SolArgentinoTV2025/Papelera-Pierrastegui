@@ -140,6 +140,11 @@ nav ul li a {
     font-weight: 700;
 }
 
+#buscador:focus {
+    outline: none;  /* Quita el borde de foco predeterminado */
+    border: 2px solid #007bff;  /* Mantiene el borde azul */
+}
+
 /* Estilos para la navegación en móviles */
 .nav-menu {
     display: none; /* Ocultar el menú por defecto en móviles */
