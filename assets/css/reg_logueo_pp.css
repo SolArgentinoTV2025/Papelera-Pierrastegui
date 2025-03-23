@@ -33,6 +33,17 @@ header {
     left: 38%;
 } 
 
+/* Ajustar tamaño de las imágenes de los íconos */
+.toggle-password {
+    width: 28px; /* Ajusta el tamaño deseado */
+    height: auto; /* Mantener la proporción de la imagen */
+    cursor: pointer; /* Asegura que se vea como un ícono clickeable */
+    margin-left: -3em;
+    color: #02a22a;
+    margin-top: 0.1em;!;!e;!em;!e;!;
+}
+
+
 p {
     color: #02a22a;
 }

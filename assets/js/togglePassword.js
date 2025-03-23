@@ -11,10 +11,10 @@ document.addEventListener("DOMContentLoaded", function () {
             // Alternar la visibilidad de la contraseña
             if (passwordInput.type === "password") {
                 passwordInput.type = "text";
-                this.src = "../images/ojoa.png"; // Cambia la imagen a ojo abierto (mostrar)
+                this.src = "https://papelerapierrastegui.com.ar/assets/images/ojoa.png"; // Cambia la imagen a ojo abierto (mostrar)
             } else {
                 passwordInput.type = "password";
-                this.src = "../images/ojoc.png"; // Cambia la imagen a ojo cerrado (ocultar)
+                this.src = "https://papelerapierrastegui.com.ar/assets/images/ojoc.png"; // Cambia la imagen a ojo cerrado (ocultar)
             }
         });
     });
