@@ -6,30 +6,35 @@
     <title>Papelera Pierrastegui</title>
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="assets/css/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
-        <h1>Papelera Pierrastegui</h1>
+      <button class="carrito dropdownc">🛒</button>
+<div class="dropdown-menuc">
+  <ul>
+    <li><a href="#">Ver carrito</a></li>
+    <li><a href="#">Pagar</a></li>
+    <li><a href="#">Productos recomendados</a></li>
+    <li><a href="#">Historial de compras</a></li>
+  </ul>
+</div>
+      <div class="headerbox">
+        <ul>
+          <li><a href="index">Inicio</a></li>
+          <li><a href="nosotros">Nosotros</a></li>
+          <li><a href="contacto">Contacto</a></li>
+      </ul>
+      </div>
+        <h1>Papelera</h1>
+        <h1>Pierrastegui</h1>
         <nav>
           <button class="menu-toggle">☰</button>
-            <ul>
-                <li><a href="index">Inicio</a></li>
-                <li><a href="nosotros">Nosotros</a></li>
-                <li><a href="contacto">Contacto</a></li>
-            </ul>
 
-            <div class="search-container">
-              <input type="text" id="buscador" onkeyup="filtrarProductos()" placeholder="Buscar productos...">
-              <button id="search-button">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" class="search-icon">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.6177 17.0319C14.078 18.2635 12.125 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 12.125 18.2635 14.078 17.0319 15.6177L22.7071 21.2929L21.2929 22.7071L15.6177 17.0319Z" fill="currentColor"></path>
-                  </svg>
-              </button>
-            </div>
         </nav>
         <div id="auth-buttons">
-            <button class="logreg" onclick="window.location.href='logueo.html'">Iniciar sesión</button>
-            <button class="logreg reg" onclick="window.location.href='registro.html'">Registrarse</button>
+            <button class="logreg" onclick="window.location.href='logueo'">Iniciar sesión</button>
+            <button class="logreg reg" onclick="window.location.href='registro'">Registrarse</button>
         </div>
         <div id="user-menu" style="display:none;">
             <div class="user-icon" onclick="toggleMenu()">
@@ -43,10 +48,50 @@
         <div class="mpavisoext" style="opacity: 0;"><span class="mpaviso">ÚNICO MEDIO DE PAGO: MercadoPago</span> <a class="infomdp" href="info/mediodepago">Mas Información</a></div>
     </header>
 
-    <!-- Menú de categorías como un dropdown debajo del header -->
-    <div class="dropdown-container">
-      <button class="dropdown-btn" id="dropdown-btn">Categorías</button>
-      <div class="dropdown-content" id="dropdown-menu">
+    <div class="search-container">
+      <input type="text" id="buscador" onkeyup="filtrarProductos()" placeholder="Buscar productos...">
+      <button id="search-button" class="search-button">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" role="img" viewBox="0 0 24 24" width="24" height="24" class="search-icon">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M17 10C17 13.866 13.866 17 10 17C6.13401 17 3 13.866 3 10C3 6.13401 6.13401 3 10 3C13.866 3 17 6.13401 17 10ZM15.6177 17.0319C14.078 18.2635 12.125 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10C19 12.125 18.2635 14.078 17.0319 15.6177L22.7071 21.2929L21.2929 22.7071L15.6177 17.0319Z" fill="currentColor"></path>
+          </svg>
+      </button>
+    </div>
+
+<!-- Contenedor del menú -->
+<div class="menu-container">
+  <nav class="category-menu">
+      <a onclick="filtrarCategoria('arranques')">Arranques</a>
+      <a onclick="filtrarCategoria('bandejas')">Bandejas</a>
+      <a onclick="filtrarCategoria('blondas')">Blondas</a>
+      <a onclick="filtrarCategoria('bolsas')">Bolsas</a>
+      <a onclick="filtrarCategoria('cajas')">Cajas</a>
+      <a onclick="filtrarCategoria('carton')">Cartón</a>
+      <a onclick="filtrarCategoria('cintas')">Cintas</a>
+      <a onclick="filtrarCategoria('cubiertos')">Cubiertos</a>
+      <a onclick="filtrarCategoria('film')">Film</a>
+      <a onclick="filtrarCategoria('folex')">Folex</a>
+
+      <!-- Botón Más como categoría -->
+      <div class="more-dropdown">
+          <a class="more-btn" onclick="toggleMoreDropdown()">Más</a>
+          <div class="dropdown-content-more" id="more-dropdown">
+              <a onclick="filtrarCategoria('guantes')">Guantes</a>
+              <a onclick="filtrarCategoria('libreria')">Librería</a>
+              <a onclick="filtrarCategoria('papel')">Papel</a>
+              <a onclick="filtrarCategoria('pizzeria')">Pizzería</a>
+              <a onclick="filtrarCategoria('potes')">Potes</a>
+              <a onclick="filtrarCategoria('rollostermicos')">Rollos Térmicos</a>
+              <a onclick="filtrarCategoria('sorbetes')">Sorbetes</a>
+              <a onclick="filtrarCategoria('vasos')">Vasos</a>
+              <a onclick="filtrarCategoria('todos')">Todos</a>
+          </div>
+      </div>
+  </nav>
+
+  <!-- Dropdown completo en móviles -->
+  <div class="dropdown-container">
+      <button class="dropdown-btn" onclick="toggleDropdown()">Categorías</button>
+      <div class="dropdown-content" id="mobile-dropdown">
           <a onclick="filtrarCategoria('arranques')">Arranques</a>
           <a onclick="filtrarCategoria('bandejas')">Bandejas</a>
           <a onclick="filtrarCategoria('blondas')">Blondas</a>
@@ -56,7 +101,7 @@
           <a onclick="filtrarCategoria('cintas')">Cintas</a>
           <a onclick="filtrarCategoria('cubiertos')">Cubiertos</a>
           <a onclick="filtrarCategoria('film')">Film</a>
-          <a onclick="filtrarCategoria('folex')">Folex</a>
+          <a onclick="filtrarCategoria('folex')">Fólex</a>
           <a onclick="filtrarCategoria('guantes')">Guantes</a>
           <a onclick="filtrarCategoria('libreria')">Librería</a>
           <a onclick="filtrarCategoria('papel')">Papel</a>
@@ -67,7 +112,8 @@
           <a onclick="filtrarCategoria('vasos')">Vasos</a>
           <a onclick="filtrarCategoria('todos')">Todos</a>
       </div>
-    </div>
+  </div>
+</div>
 
     <main>
         <section id="catalogo">
@@ -85,6 +131,5 @@
 
     <script src="assets/js/inicio.js"></script>
     <script src="assets/js/iniciodropdown.js"></script>
-    <script src="assets/js/buscador.js"></script>
 </body>
 </html>

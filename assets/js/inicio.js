@@ -115,62 +115,95 @@ const productos = [
     { nombre: 'Vasos telgopor', descripcion: '', precioARS: 0, imagen: 'https://papelerapierrastegui.com.ar/assets/images/Fotos%20productos%20papelera%20para%20catálogo/VASOS/vaso-termico-180-cc-50-unidades1-effa370a04aa41b56b15571658086178-480-0.jpg', ruta: 'productos\\vasos\\telgopor.html', categoria: 'Vasos', boton: 'Ver Producto' },
 ];
 
-const tasaCompraUSD = 1195;
-const tasaVentaUSD = 1215;
-let monedaActual = 'ARS';
+// Función para filtrar productos según la categoría
+function filtrarCategoria(categoria) {
+    console.log("Filtrando productos de la categoría:", categoria); // Verifica en la consola
 
-function cargarProductos() {
-    const contenedor = document.querySelector('.productos');
-    contenedor.innerHTML = '';
-    productos.forEach((producto, index) => {
-        const precioUSD = (producto.precioARS / tasaVentaUSD).toFixed(2);
-        const precio = monedaActual === 'ARS' ? `$${producto.precioARS} ARS` : `$${precioUSD} USD`;
+    const contenedor = document.getElementById('productos');
+    contenedor.innerHTML = '';  // Limpiar el contenedor de productos
 
+    // Si la categoría es "todos", mostramos todos los productos
+    if (categoria.toLowerCase() === 'todos') {
+        cargarProductos(); // Llamamos a cargar todos los productos
+        return;
+    }
+
+    // Filtrar productos según la categoría seleccionada
+    const productosFiltrados = productos.filter(producto => producto.categoria.toLowerCase() === categoria.toLowerCase());
+
+    if (productosFiltrados.length === 0) {
+        contenedor.innerHTML = '<p>No hay productos en esta categoría.</p>';
+        return;
+    }
+
+    // Mostrar los productos filtrados
+    productosFiltrados.forEach((producto, index) => {
         const productoHTML = `
             <div class="producto">
                 <img src="${producto.imagen}" alt="${producto.nombre}">
                 <h3>${producto.nombre}</h3>
                 <p>${producto.descripcion}</p>
-                <p>Precio: <span class="precio">${precio}</span></p>
+                <p>Precio: <span class="precio">$${producto.precio} ARS</span></p>
                 <a href="${producto.ruta}" class="btn-ver-producto">${producto.boton}</a>
             </div>
         `;
         
         contenedor.innerHTML += productoHTML;
 
+        // Para hacer un "clearfix" cada 5 productos (opcional, si usas un grid)
         if ((index + 1) % 5 === 0) {
             contenedor.innerHTML += '<div class="clearfix"></div>';
         }
     });
 }
 
-document.querySelector('.menu-toggle').addEventListener('click', function() {
-    document.querySelector('.nav-menu').classList.toggle('active');
+// Mostrar/Ocultar el dropdown de "Más"
+function toggleMoreDropdown() {
+    const moreDropdown = document.getElementById('more-dropdown');
+    const isOpen = moreDropdown.style.display === 'block';
+    
+    if (isOpen) {
+        moreDropdown.style.display = 'none';
+    } else {
+        moreDropdown.style.display = 'block';
+    }
+}
+
+// Cerrar el dropdown si se hace clic fuera de él
+document.addEventListener('click', function(event) {
+    const moreDropdown = document.getElementById('more-dropdown');
+    const moreBtn = document.querySelector('.more-btn');
+    if (!moreBtn.contains(event.target) && !moreDropdown.contains(event.target)) {
+        moreDropdown.style.display = 'none';
+    }
 });
 
-// Función para mostrar los productos en el catálogo
-function mostrarProductos(productosFiltrados) {
-    const productosContainer = document.getElementById('productos');
-    productosContainer.innerHTML = '';  // Limpiar productos existentes
-    productosFiltrados.forEach(producto => {
-        const productoDiv = document.createElement('div');
-        productoDiv.classList.add('producto');
-        productoDiv.innerHTML = `<p>${producto.nombre}</p>`;
-        productosContainer.appendChild(productoDiv);
+// Función para cargar todos los productos por defecto
+function cargarProductos() {
+    const contenedor = document.getElementById('productos');
+    contenedor.innerHTML = '';  // Limpiar los productos existentes
+
+    productos.forEach((producto, index) => {
+        const productoHTML = `
+            <div class="producto">
+                <img src="${producto.imagen}" alt="${producto.nombre}">
+                <h3>${producto.nombre}</h3>
+                <p>${producto.descripcion}</p>
+                <p>Precio: <span class="precio">$${producto.precio} ARS</span></p>
+                <a href="${producto.ruta}" class="btn-ver-producto">${producto.boton}</a>
+            </div>
+        `;
+        
+        contenedor.innerHTML += productoHTML;
+
+        // Para hacer un "clearfix" cada 5 productos (opcional)
+        if ((index + 1) % 5 === 0) {
+            contenedor.innerHTML += '<div class="clearfix"></div>';
+        }
     });
 }
 
-// Función para filtrar productos
-function filtrarProductos() {
-    const searchTerm = document.getElementById('buscador').value.toLowerCase();
-    const productosFiltrados = productos.filter(producto => 
-        producto.nombre.toLowerCase().includes(searchTerm)
-    );
-    mostrarProductos(productosFiltrados);
-}
-
-// Ejecutar la búsqueda al hacer clic en la lupa
-document.getElementById('search-button').addEventListener('click', filtrarProductos);
-
-// Mostrar todos los productos al cargar la página
-mostrarProductos(productos);
+// Ejecutar la función de cargar productos cuando se cargue la página
+document.addEventListener('DOMContentLoaded', function() {
+    cargarProductos(); // Mostrar todos los productos por defecto al cargar la página
+});

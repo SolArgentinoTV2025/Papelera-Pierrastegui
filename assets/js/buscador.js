@@ -5,12 +5,12 @@ function mostrarProductos(productosFiltrados) {
     productosFiltrados.forEach(producto => {
         const productoDiv = document.createElement('div');
         productoDiv.classList.add('producto');
-        productoDiv.innerHTML = `<p>${producto.nombre}</p>`;
+        productoDiv.innerHTML = `<p>${producto.nombre}</p>`;  // Cambia esto según tu estructura de producto
         productosContainer.appendChild(productoDiv);
     });
 }
 
-// Función para filtrar productos
+// Función para filtrar productos según el término de búsqueda
 function filtrarProductos() {
     const searchTerm = document.getElementById('buscador').value.toLowerCase();
     const productosFiltrados = productos.filter(producto => 

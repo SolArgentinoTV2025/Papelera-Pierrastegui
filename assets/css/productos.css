@@ -10,7 +10,7 @@ body {
 
 header {
     background-color: #fff;
-    color: #007BFF;
+    color: #02a22a;
     padding: 1em;
     text-align: center;
     box-shadow: 0 0 0.4em 0 #00000073;
@@ -33,7 +33,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #007BFF;
+    color: #02a22a;
     text-decoration: none;
     padding: 0.5em 1em;
     display: block;
@@ -42,7 +42,7 @@ nav ul li a {
 
 #producto-detalle {
     padding: 2em;
-    color: #007BFF;
+    color: #02a22a;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -85,14 +85,14 @@ nav ul li a {
 .precio {
     font-weight: 700;
     font-size: 1.5em;
-    color: #007BFF;
+    color: #02a22a;
 }
 
 .agregar-carrito {
-    border: 2px solid #007BFF;
+    border: 2px solid #02a22a;
     background-color: #fff;
     padding: 0.8em;
-    color: #007BFF;
+    color: #02a22a;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
@@ -104,7 +104,7 @@ nav ul li a {
 }
 
 .agregar-carrito:hover {
-    background-color: #007BFF;
+    background-color: #02a22a;
     color: #ddd;
 }
 
@@ -112,7 +112,7 @@ footer {
     text-align: center;
     padding: 1em;
     background-color: #fff;
-    color: #007BFF;
+    color: #02a22a;
     margin-top: 2em;
     line-height: 0;
     box-shadow: 0 0 0.4em 0 #00000073;
@@ -158,6 +158,6 @@ footer p {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #007BFF;
+    background: #02a22a;
     border-radius: 6px;
 }
