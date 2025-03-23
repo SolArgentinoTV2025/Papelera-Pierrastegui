@@ -672,3 +672,25 @@ p.textocat {
 .nav-menu li {
     margin: 10px 0;
 }
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#buscador {
+    padding: 8px 30px 8px 10px;
+    border: 2px solid #007bff;  /* Borde azul */
+    border-radius: 20px;
+    width: 100%;
+    background-color: #fff;  /* Fondo blanco */
+    font-size: 16px;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    color: #888;
+    pointer-events: none;
+}

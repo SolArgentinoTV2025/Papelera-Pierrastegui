@@ -4,15 +4,15 @@ body {
     font-family: 'Gilroy', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #c5c0a5;
+    background-color: #fff;
     font-size: 1em;
     line-height: 1.7;
-    color: #483606;
+    color: #007BFF;
 }
 
 header {
-    background-color: #c5c0a5;
-    color: #483606;
+    background-color: #fff;
+    color: #007BFF;
     padding: 1em;
     text-align: center;
     box-shadow: 0 0 0.4em 0 #00000073;
@@ -32,7 +32,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #483606;
+    color: #007BFF;
     text-decoration: none;
     padding: 0.5em 1em;
     font-size: 1.2em;
@@ -40,8 +40,8 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #c5c0a5; /* Cambio de color al pasar el mouse */
-    background-color: #483606; /* Fondo oscuro al pasar el mouse */
+    color: #fff; /* Cambio de color al pasar el mouse */
+    background-color: #007BFF; /* Fondo oscuro al pasar el mouse */
     border-radius: 5px; /* Bordes redondeados para el hover */
      /* Aumentamos el padding para un efecto más notorio */
 }
@@ -50,7 +50,7 @@ nav ul li a:hover {
     max-width: 900px;
     margin: 4em auto;
     padding: 2.5em 3em;
-    background: #f1ecd6; /* Fondo del contenedor del artículo */
+    background: #ddd; /* Fondo del contenedor del artículo */
     border-radius: 15px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out;
@@ -63,13 +63,13 @@ nav ul li a:hover {
 
 .articulo-header h2 {
     font-size: 2.5em;
-    color: #483606;
+    color: #007BFF;
     margin-bottom: 0.5em;
 }
 
 .subtitulo {
     font-size: 1.2em;
-    color: #483606;
+    color: #007BFF;
     font-weight: 400;
     margin-bottom: 1.5em;
 }
@@ -97,7 +97,7 @@ nav ul li a:hover {
 .enlace-pago a {
     font-size: 1.5em;
     font-weight: 700;
-    color: #483606;
+    color: #007BFF;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -109,7 +109,7 @@ nav ul li a:hover {
 }
 
 .enlace-pago a:hover {
-    color: #c5c0a5;
+    color: #fff;
 }
 
 .enlace-pago img {
@@ -131,21 +131,21 @@ nav ul li a:hover {
 }
 
 .contacto-info a {
-    color: #483606;
+    color: #007BFF;
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease;
 }
 
 .contacto-info a:hover {
-    color: #c5c0a5;
+    color: #fff;
 }
 
 footer {
     text-align: center;
     padding: 1em;
-    background-color: #c5c0a5;
-    color: #483606;
+    background-color: #fff;
+    color: #007BFF;
     margin-top: 2em;
     line-height: 0;
     box-shadow: 0 0 0.4em 0 #00000073;
@@ -160,7 +160,7 @@ footer p {
     }
     
     .contacto-info a {
-        color: #483606;
+        color: #007BFF;
         text-decoration: none;
         font-weight: 700;
         transition: color 0.3s ease;
@@ -173,14 +173,14 @@ footer p {
     }
 
     .contacto-info a {
-    color: #483606;
+    color: #007bff;
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease;
 }
 
 .contacto-info a {
-    color: #483606;
+    color: #007bff;
     text-decoration: none;
     font-weight: 700;
     transition: color 0.3s ease;
@@ -196,7 +196,7 @@ footer p {
     }
 
     .contacto-info a {
-        color: #483606;
+        color: #007bff;
         text-decoration: none;
         font-weight: 700;
         transition: color 0.3s ease;
@@ -211,10 +211,10 @@ footer p {
 }
 
 ::-webkit-scrollbar-track {
-    background: #c5c0a5;
+    background: #fff;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #f1ecd6;
+    background: #ddd;
     border-radius: 10px;
 }
