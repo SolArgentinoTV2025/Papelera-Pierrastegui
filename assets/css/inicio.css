@@ -24,13 +24,25 @@ header {
     height: 7.5em;
 }
 
+.logo1 {
+    position: relative;
+    width: 5em;
+    height: 5em;
+    !;!e;!em;!e;!;
+    top: -5.56em;
+    left: 24em;
+}
+
 header h1 {
     margin-left: -36em;!;!e;!em;!e;!;
     position: relative;
-    top: -1.6em;
+    top: -1.56em;
     font-size: 2.5em;
     line-height: 0.2em;
     text-transform: uppercase;
+    b;
+    url(
+    url(https://papelerapierrastegui.com.ar/assets/images/favicon.png));
 }
 
 h1 {}
@@ -274,6 +286,7 @@ nav ul li a {
     margin: 1em;
     width: calc(20% - 2em);
     color: #02a22a;
+    height: 25em;
 }
 
 .precio {
@@ -734,7 +747,22 @@ a.more-btn {
     border-radius: 5px;
     border: 2px solid #02a22a;
     font-weight: 700;
+    position: absolute; /* Posiciona el botón de forma absoluta dentro de .producto */
+    bottom: -40px; /* Lo coloca justo debajo de .droptmn-btn */
+    left: 0; /* Alineado a la izquierda del contenedor */
+    right: 0; /* Alineado a la derecha del contenedor */
+    margin: 0 auto; /* Centrado horizontalmente */
+    width: 8em;
+    top: 23em;!;!e;!em;!e;!;!;
+    height: 1.4em;
 }
+
+.producto {
+    position: relative !important; /* Esto asegura que los botones se posicionen dentro del contenedor */
+}
+
+a.btn-ver-producto {}
+
 
 .btn-ver-producto:hover {
     background-color: #02a22a;
@@ -849,7 +877,7 @@ a.more-btn {
     position: relative;
     max-width: 500px;
     margin: 20px auto;
-    margin-top: -4.9em;
+    margin-top: -4.23em;
   }
 
 .headerbox {
@@ -880,4 +908,75 @@ a.more-btn {
 
 .headerbox li {
     margin-right: 15px; /* Espacio entre los elementos */
+}
+
+/* Estilo general para el dropdown */
+.droptmn {
+    position: relative;
+    display: inline-block;
+}
+
+.droptmn-menu {
+    display: none; /* Oculto por defecto */
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 91px;
+    padding: 10px 0;
+    border-radius: 5px;
+    border: 2px solid #02a22a;
+    max-height: 200px; /* Define un límite de altura para activar el scroll */
+    overflow-y: auto; /* Permite el scroll vertical si es necesario */
+    margin-top: 0.2em;
+}
+
+/* Estilos de los elementos de la lista */
+.droptmn-menu li {
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.droptmn-menu li:hover {
+    background-color: #02a22a;
+    color: #fff;
+}
+
+/* Mostrar menú cuando tiene la clase "droptmn-show" */
+.droptmn-show {
+    display: block;
+}
+
+/* Botón del dropdown */
+.droptmn-btn {
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #02a22a;
+    border: 2px solid #02a22a;
+    border-radius: 0.3em;
+    cursor: pointer;
+    font-family: 'Gilroy', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    width: 5.3em;
+}
+
+/* Cambio de color al pasar el ratón */
+.droptmn-btn:hover {
+    background-color: #02a22a;
+    color: #fff;
+}
+
+/* Hacer invisible el scrollbar pero funcional */
+.droptmn-menu::-webkit-scrollbar {
+    width: 0px; /* Tamaño del scrollbar */
+}
+
+.droptmn-menu::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.droptmn-menu::-webkit-scrollbar-thumb {
+    background: transparent; /* Invisible */
 }

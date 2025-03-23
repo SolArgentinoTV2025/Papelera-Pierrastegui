@@ -43,3 +43,46 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+// Función para inicializar el dropdown
+function inicializarDropdown() {
+    const contenedor = document.getElementById('productos');
+
+    const dropdownBtns = contenedor.querySelectorAll('.droptmn-btn');
+    dropdownBtns.forEach((btn) => {
+        // Al hacer clic en el botón, mostrar u ocultar el dropdown
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation(); // Evitar que el clic cierre el dropdown
+            const menu = btn.nextElementSibling; // Seleccionamos el <ul> de opciones
+            menu.classList.toggle('droptmn-show'); // Alternamos el 'display'
+        });
+    });
+
+    // Cerrar el dropdown si se hace clic fuera del dropdown
+    document.addEventListener('click', (e) => {
+        const dropdowns = contenedor.querySelectorAll('.droptmn');
+        dropdowns.forEach((dropdown) => {
+            const menu = dropdown.querySelector('.droptmn-menu');
+            const btn = dropdown.querySelector('.droptmn-btn');
+            // Si el clic no es dentro del dropdown, cerramos el menú
+            if (!dropdown.contains(e.target)) {
+                menu.classList.remove('droptmn-show');
+            }
+        });
+    });
+
+    // Cerrar el dropdown cuando se selecciona un tamaño
+    const menuItems = contenedor.querySelectorAll('.droptmn-menu li');
+    menuItems.forEach((item) => {
+        item.addEventListener('click', (e) => {
+            const selectedSize = e.target.textContent; // Obtener el texto del tamaño seleccionado
+            const menu = e.target.closest('.droptmn-menu');
+            const button = menu.previousElementSibling; // Obtener el botón del dropdown
+            
+            // Actualizar el texto del botón con el tamaño seleccionado
+            button.textContent = `${selectedSize}`;
+            
+            menu.classList.remove('droptmn-show'); // Cerrar el menú después de la selección
+        });
+    });
+}
