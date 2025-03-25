@@ -150,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <!-- Dropdown solo si el producto tiene tamaños -->
                         ${tamanos ? `
                             <div class="droptmn">
-                                <button class="droptmn-btn">0x0</button>
+                                <span class="textomed">Medidas</span>
                                 <ul class="droptmn-menu">
                                     ${tamanos.map(tamano => `<li data-size="${tamano}">${tamano}</li>`).join('')}
                                 </ul>

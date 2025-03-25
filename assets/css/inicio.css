@@ -974,6 +974,13 @@ a.btn-ver-producto {}
     font-weight: 700;
     font-size: 18px;
     width: 5.3em;
+    height: 2.5em;!;!e;!em;!e;!;
+}
+
+.textomed {
+    position: absolute;
+    left: 0.66em;
+    top: 0.6em;
 }
 
 /* Cambio de color al pasar el ratón */
