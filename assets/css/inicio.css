@@ -26,17 +26,17 @@ button.carrito {
     border-radius: 50%;
     transition: background-color 0.3s ease;
     font-family: 'FontAwesome'; /* Para usar FontAwesome */
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    padding-left: 0.5em;
-    padding-right: 0.4em;
+    padding-top: 0.52em;
+    padding-bottom: 0.52em;
+    padding-left: 0.48em;
+    padding-right: 0.5em;
     z-index: 3000;
-    margin-top: -9.6em;
+    margin-top: -9.5em;
     position: absolute;
     text-align: center; /* Asegura que el ícono se centre dentro del botón */
     line-height: 1; /* Alineación vertical */
     border: none; /* Removemos el borde original */
-    margin-left: 69em;
+    margin-left: 68em;
     font-size: 1em;
 }
 
@@ -48,7 +48,7 @@ button.carrito::after {
     right: -3px; /* Desplazamos el borde hacia afuera */
     bottom: -3px; /* Desplazamos el borde hacia afuera */
     border-radius: 50%; /* Borde redondeado */
-    border: 4px solid #02a22a; /* El borde extra */
+    border: 3px solid #02a22a; /* El borde extra */
     z-index: 1000; /* Colocamos el borde detrás del ícono */
 }
 
@@ -66,7 +66,7 @@ button.carrito i {
 .dropdown-menuc {
     position: absolute;
     display: none; /* Inicialmente oculto */
-    top: 40px; /* Distancia desde el botón */
+    top: 27px; /* Distancia desde el botón */
     right: 19em; /* Alineación a la derecha */
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -127,10 +127,9 @@ nav.category-menu {
     display: flex;
     z-index: 1000;
     gap: 0.4em;  /* Espacio entre los elementos flex */
-    margin-top: 1.8em;!;!e;!em;!em,;!em;!e;!;
+    margin-top: -4.23em;!;!e;!em;!em,;!em;!e;!;
     
     !em;!e;!;
-    margin-bottom: -1.3em;
 }
 
 nav.category-menu a {
@@ -138,11 +137,33 @@ nav.category-menu a {
     cursor: pointer;
     background: #fff;
     padding: 8px 12px;
+    height: 1.3em;
 }
 
 .more-btn {
     position: absolute;!;!e;!em;!e;!;
     z-index: 1000;
+}
+
+.dropdown-content-more {
+    display: none;
+    margin-top: 3em;
+    margin-left: -1em;
+}
+
+/* Estilo base */
+.dropdown-content-more a {
+    display: block;
+    padding: 10px;
+    background-color: white;
+    color: #02a22a;  /* Color del texto */
+    text-decoration: none;
+}
+
+/* Efecto hover */
+.dropdown-content-more a:hover {
+    background-color: #02a22a;  /* Fondo en hover */
+    color: white;  /* Color del texto en hover */
 }
 
 nav.category-menu a:hover {
@@ -175,7 +196,7 @@ a.logotext1:focus {
    HEADERBOX (Navegación fija, fondo negro)
 ================================ */
 .headerbox {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -187,6 +208,7 @@ a.logotext1:focus {
   justify-content: center;
   align-items: center;
   height: 1.8em;
+  margin-top: -3em;
 }
 
 .headerbox ul {
@@ -219,7 +241,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2em 0;
+  padding: 3.5em 0;
   background-color: #fff;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
   margin-top: 3em; /* Espacio para la barra negra fija */
@@ -229,13 +251,13 @@ header {
 
 /* Logo */
 .logo1 {
-  margin-top: -6.4em;
   width: 6em;
   height: auto;
   margin-bottom: 0.5em;
   margin-left: 27em;
   !;!e;!em;!e;!;
-  position: absolute;
+  position: relative;
+  top: -6.3em;
 }
 
 /* Nombre del sitio */
@@ -253,10 +275,11 @@ a.logotext1 {
 }
 
 .search-container {
-  position: absolute;
+  position: relative;
   width: 33em;
-  margin-top: 5.4em;
+  margin-top: -3.3em;
   left: 44em;
+  top: -8em;
 }
 
 #buscador {
@@ -290,8 +313,8 @@ a.logotext1 {
 .search-icon {
   color: #02a22a;
   width: 20px;
-  height: 1.5em;
-  margin-right: -4.5em;!;!e;!em;!e;!;
+  height: 1.67em;
+  margin-right: -4.2em;!;!e;!em;!e;!;
   margin-left;:;
   margin-left;: 1;
   margin-left;: 1e;
@@ -299,15 +322,13 @@ a.logotext1 {
   border: 2px solid #02a22a;
   padding-top: 0.6em;
   padding-bottom: 0.6em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  margin-top: 0.2em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  margin-top: 0.3em;
   border-top-right-radius: 0.3em;
   border-bottom-right-radius: 0.3em;
 }
 
-.search-button:hover svg,
-#search-button:hover,
 svg:hover {color: #fff;background: #02a22a;}
 
 
@@ -320,7 +341,7 @@ svg:hover {color: #fff;background: #02a22a;}
   position: relative;
   margin: -2.8em auto 0 auto;
   width: max-content;
-  top: 0.97em;
+  top: 0.96em;
   left: 15em;
 }
 .logreg {
@@ -345,7 +366,7 @@ svg:hover {color: #fff;background: #02a22a;}
   cursor: pointer;
 }
 .reg {
-  margin-top: -1.67em !important;!i;!;
+  margin-top: -1.65em !important;!i;!;
   margin-left: 23.4em;
   height: 1.63em;
 }
@@ -402,6 +423,7 @@ nav ul li a {
   !em;!e;!;
   position: relative;
   left: 10em;
+  margin-top: -2.3em;
 }
 .producto {
   background: #ddd;
@@ -512,11 +534,11 @@ footer {
   color: #02a22a;
   box-shadow: 0 0 0.4em rgba(0,0,0,0.45);
   width: 100%;
-  position: absolute;
+  position: relative;
   height: 3.5em;
   line-height: 0.4em;
   font-weight: 700;
-  margin-top: 51.8em;!em;!e;!;
+  !em;!e;!;
 }
 
 /* ================================
