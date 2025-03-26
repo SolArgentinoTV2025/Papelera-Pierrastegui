@@ -1,1007 +1,572 @@
 @import url('https://fuentes.solargentinotv.com.ar/importgilroy.css');
 
+/* ================================
+   BASE Y RESET
+================================ */
 html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    background-color: #fff;
-    font-family: 'Gilroy';
-    font-size: 1em;
-    overflow-x: hidden; /* Bloquea el desbordamiento horizontal */
-    background-image: url(https://img.freepik.com/foto-gratis/muro-hormigon-texturizado_53876-89536.jpg);
-    background-size: contain;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #fff;
+  font-family: 'Gilroy', sans-serif;
+  font-size: 1em;
+  overflow-x: hidden;
+  background-image: url(https://img.freepik.com/foto-gratis/muro-hormigon-texturizado_53876-89536.jpg);
+  background-size: contain;
 }
 
-a.logotext1:visited {
+button.carrito {
+    font-size: 1.5em;
+    background-color: #fff !important;!i;!;
+    color: #02a22a !important;!i;!;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+    font-family: 'FontAwesome'; /* Para usar FontAwesome */
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 0.5em;
+    padding-right: 0.4em;
+    z-index: 2000;
+    margin-top: -9.1em;
+    position: absolute;
+    text-align: center; /* Asegura que el ícono se centre dentro del botón */
+    line-height: 1; /* Alineación vertical */
+    border: none; /* Removemos el borde original */
+    margin-left: 61em;
+    font-size: 1.13em;
+}
+
+button.carrito::after {
+    content: ""; /* Pseudo-elemento vacío */
+    position: absolute;
+    top: -3px; /* Desplazamos el borde hacia afuera */
+    left: -3px; /* Desplazamos el borde hacia afuera */
+    right: -3px; /* Desplazamos el borde hacia afuera */
+    bottom: -3px; /* Desplazamos el borde hacia afuera */
+    border-radius: 50%; /* Borde redondeado */
+    border: 4px solid #02a22a; /* El borde extra */
+    z-index: 1000; /* Colocamos el borde detrás del ícono */
+}
+
+button.carrito:hover {
+    background-color: #02a22a !important;!i;!;
+    color: #fff !important;!i;!; /* Cambiar color cuando el ratón pasa sobre el botón */
+}
+
+
+button.carrito i {
+    font-size: 1.5em;
+}
+
+/* Estilo para el contenedor del menú desplegable */
+.dropdown-menuc {
+    position: absolute;
+    display: none; /* Inicialmente oculto */
+    top: 40px; /* Distancia desde el botón */
+    right: 19em; /* Alineación a la derecha */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 200px; /* Ancho del menú */
+    z-index: 2000; /* Para asegurarse de que el menú esté por encima de otros elementos */
+    !;!e;!em;!e;!;
+    border: 2px solid #02a22a;
+    z.i: 1;
+    margin-top: -1.5em;
+}
+
+/* Estilo de los elementos del menú */
+.dropdown-menuc ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.dropdown-menuc ul li {
+    border-bottom: 1px solid #f0f0f0; /* Línea de separación entre los elementos */
+}
+
+.dropdown-menuc ul li:last-child {
+    border-bottom: none; /* Sin línea de separación en el último elemento */
+}
+
+.dropdown-menuc ul li a {
+    display: block;
+    padding: 10px 15px;
     text-decoration: none;
     color: #02a22a;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menuc ul li a:hover {
+    background-color: #02a22a; /* Color de fondo al pasar el ratón */
+    color: #fff;
+}
+
+/* Mostrar el menú cuando el botón se presiona */
+button.carrito:focus + .dropdown-menuc, 
+button.carrito:hover + .dropdown-menuc {
+    display: block;
+}
+
+.menu-container {
+}
+
+nav.category-menu {
+    z-index: 2000;
+    position: relative;
+    color: #02a22a;
+    left: 28em;
+    width: 56em;
+    font-weight: 600;
+    display: flex;
+    z-index: 1000;
+    gap: 0.4em;  /* Espacio entre los elementos flex */
+    margin-top: 1.8em;!;!e;!em;!em,;!em;!e;!;
+    
+    !em;!e;!;
+    margin-bottom: -1.3em;
+}
+
+nav.category-menu a {
+    !em;!e;!;
+    cursor: pointer;
+    background: #fff;
+    padding: 8px 12px;
+}
+
+.more-btn {
+    position: absolute;!;!e;!em;!e;!;
+    z-index: 1000;
+}
+
+nav.category-menu a:hover {
+    color: #fff;
+    background: #02a22a;
+}
+
+/* ================================
+   ENLACES
+================================ */
+a.logotext1,
+a.logotext1:visited {
+  text-decoration: none;
+  color: #02a22a;
 }
 
 .logotext1 {
-    color: #02a22a;
-    text-decoration: none;
+    position: relative;
+    top: -6em;!;!e;!em;!e;!;
+    left: -38em;
 }
-
 a.logotext1:hover {
-    color: #034914;
+  color: #034914;
 }
-
-.logotext1:focus {
-    all: unset;
-}
-
-header {
-    background-color: #fff;
-    color: #02a22a;!;!i;!;!;
-    padding: 1em;
-    text-align: center;
-    box-shadow: 0 0 0.4em 0 #00000073;
-    height: 7.5em;
-}
-
-.logo1 {
-    position: relative;
-    width: 5em;
-    height: 5em;
-    !;!e;!em;!e;!;
-    top: -5.56em;
-    left: 24em;
-}
-
-header h1 {
-    margin-left: -36em;!;!e;!em;!e;!;
-    position: relative;
-    top: -1.56em;
-    font-size: 2.5em;
-    line-height: 0.2em;
-    text-transform: uppercase;
-    b;
-    url(
-    url(https://papelerapierrastegui.com.ar/assets/images/favicon.png));
-}
-
-main {
-    flex: 1; /* Hace que el contenido principal crezca y empuje el footer hacia abajo */
-    padding: 2em;
-}
-
-.mpavisoext {
-    margin-left: 7em;
-    position: relative;
-}
-
-.infomdp {
-    margin-top: -7em;
-    margin-left: -34.581em;
-    position: absolute;
-    color: #02a22a;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    text-decoration: none;
-    font-weight: 700;
-    border-top-right-radius: 0.2em;
-    border-bottom-right-radius: 0.2em;
-    border: 4px solid #02a22a;
-    background: #fff;
-}
-
-.infomdp:hover {
-    background: #02a22a;
-    color: #fff;
-}
-
-.mpaviso {
-    font-weight: 700;
-    position: absolute;
-    margin-left: -57em;
-    margin-top: -7em;
-    background: #02a22a;
-    color: #fff;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 0.3em;
-    padding-bottom: 0.3em;
-    border: 4px solid #02a22a;
-    border-top-left-radius: 0.2em;
-    border-bottom-left-radius: 0.2em;
-}
-
-.mpaviso::after {
-    content: '⚠️';
-    position: absolute;
-    margin-left: 0.3em !important;!im;!imo;!imop;!i;!;
-}
-
-.mpaviso::before, .mpaviso::after {
-    content: '⚠️';
-    position: absolute;
-    margin-left: -1.5em;
-    margin-top: -0.1em;
-}
-
-.logreg {
-    background: #fff;
-    color: #02a22a;
-    border: none;
-    padding-left: 2em;
-    padding-right: 2em;!em;!e;!;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    font-family: 'Gilroy';
-    font-weight: 700;
-    font-size: 16px;
-    border-radius: 0.3em;
-    display: block;
-    width: 11em;
-    margin-left: 33em;
-    margin-top: -9.7em;
-    position: absolute;
-}
-
-.logreg:hover {
-    background: #02a22a;
-    color: #fff;
-    cursor: pointer;
-}
-
-.reg {
-    margin-top: -9.7em;
-    margin-left: 44.4em;
-}
-
-div#auth-buttons {
-    color: #02a22a;
-    background: #fff;
-    position: relative;
-    margin-left: 36.6em;
-    margin-top: -2.8em;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-}
-
-nav ul li {
-    margin: 0 1em;
-    position: relative;
-    color: #02a22a;
-}
-
-nav ul li a {
-    color: #02a22a;
-    text-decoration: none;
-    padding: 0.5em 1em;
-    display: block;
-    font-weight: 700;
-}
-
-#buscador:focus {
-    outline: none;  /* Quita el borde de foco predeterminado */
-    border: 2px solid #02a22a;  /* Mantiene el borde azul */
-}
-
-/* Estilos para la navegación en móviles */
-.nav-menu {
-    display: none; /* Ocultar el menú por defecto en móviles */
-    flex-direction: column;
-    align-items: center;
-    background: #fff;
-    padding: 1em 0;
-    position: absolute;
-    width: 100%;
-    top: 60px;
-    left: 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#catalogo {
-    padding: 2em;
-    color: #02a22a;
-}
-
-.carrito {
-    position: relative !important;!i;!;
-    top: -0.57em;!em;!em;!e;!;
-    font-weight: 700;
-    z-index: 2000;
-    left: 25.6em;
-    font-size: 22px;
-    font-family: FONTAWESOME;
-    color: #02a22a;
-    border: 4px solid #02a22a;
-    padding-top: 0.4em;!em;!em;!e;!;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-    padding-bottom: 0.3em;
-    background: #ffffff;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.carrito:hover {
-    color: #fff;
-    background: #02a22a;
-}
-
-/* Estilos para el menú desplegable */
-.dropdown-menuc {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  background-color: #f9f9f9;
-  min-width: 200px;
-  border: 1px solid #ddd;
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-menuc ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.dropdown-menuc li a {
-  display: block;
-  padding: 8px 16px;
-  text-decoration: none;
-  color: #333;
-}
-
-.dropdown-menuc li a:hover {
-  background-color: #ddd;
-}
-
-/* Mostrar el menú desplegable cuando se active */
-.dropdownc.active + .dropdown-menuc {
-  display: block;
-}
-
-
-.agotado {
-    position: absolute;
-    background: #f00;
-    padding-top: 0.34em;
-    padding-bottom: 0.25em;
-    padding-left: 1em;
-    padding-right: 1em;
-    color: #fff;
-    font-weight: 780;
-    border-radius: 0.3em;
-    left: 17.3em;
-}
-
-#agotgrueso {
-    opacity: 1;
-}
-
-.productos {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 11em;
-}
-
-.producto {
-    background: #ddd;
-    padding: 1em;
-    text-align: center;
-    border-radius: 0.5em;
-    box-shadow: 0 0 1em rgb(0 0 0 / 29%);
-    margin: 1em;
-    width: calc(20% - 2em);
-    color: #02a22a;
-    height: 25em;
-}
-
-.precio {
-    font-weight: 700;
-}
-
-.producto img {
-    width: 20.14em;
-    margin-bottom: 1em;
-    margin-left: -1em;
-    margin-top: -1em;
-    height: 12em;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    object-fit: cover;
-}
-
-.imgos {
-    object-fit: contain !important;!i;!;
-}
-
-footer {
-    text-align: center;
-    padding: 1em;
-    background-color: #fff;
-    color: #02a22a;
-    box-shadow: 0 0 0.4em 0 #00000073;
-    width: 100%; /* Ajusta el ancho correctamente */
-    position: relative; /* Se ajusta al contenido */
-    bottom: 0;
-     /* Evita cualquier desborde */
-    height: 3.5em;
-    line-height: 0.4em;
-    font-weight: 700;
-}
-
-/* Media Queries para diseÃ±o responsivo */
-@media (max-width: 75em) { /* 1200px */
-    .producto {
-        width: calc(25% - -26em);
-        margin-left: -4em;
-    }
-
-.mpavisoext {
-    margin-left: 62em;!;!e;!em;!e;!;
-    margin-top: -1em;
-    position: relative;
-}
-
-    .mpaviso {
-        font-weight: 700;
-        position: absolute;
-        margin-left: -57em;
-        margin-top: -7em;
-        background: #02a22a;
-        color: #fff;
-        padding-left: 2em;
-        padding-right: 2em;
-        padding-top: 0.3em;
-        padding-bottom: 0.3em;
-        border: 4px solid #02a22a;
-        border-top-left-radius: 0.2em;
-        border-bottom-left-radius: 0.2em;
-    }
-    
-    .mpaviso::after {
-        content: '⚠️';
-        position: absolute;
-        margin-left: 0.3em !important;!im;!imo;!imop;!i;!;
-    }
-    
-    .mpaviso::before, .mpaviso::after {
-        content: '⚠️';
-        position: absolute;
-        margin-left: -1.5em;
-        margin-top: -0.1em;
-    }
-
-    .producto img {
-    width: 41.3em;
-    margin-bottom: 1em;
-    margin-left: -1em;
-    margin-top: -1em;
-    height: 12em;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    object-fit: cover;
-}
-}
-
-@media (max-width: 56.25em) { /* 900px */
-    .producto {
-        width: calc(33.33% - -4em);
-        margin-left: -1em;
-    }
-        .mpaviso {
-        font-weight: 700;
-        position: absolute;
-        margin-left: -57em;
-        margin-top: -7em;
-        background: #02a22a;
-        color: #fff;
-        padding-left: 2em;
-        padding-right: 2em;
-        padding-top: 0.3em;
-        padding-bottom: 0.3em;
-        border: 4px solid #02a22a;
-        border-top-left-radius: 0.2em;
-        border-bottom-left-radius: 0.2em;
-    }
-    
-    .mpaviso::after {
-        content: '⚠️';
-        position: absolute;
-        margin-left: 0.3em !important;!im;!imo;!imop;!i;!;
-    }
-    
-    .mpaviso::before, .mpaviso::after {
-        content: '⚠️';
-        position: absolute;
-        margin-left: -1.5em;
-        margin-top: -0.1em;
-    }
-
-    .producto img {
-    width: 15.9em;
-    margin-bottom: 1em;
-    margin-left: -1em;
-    margin-top: -1em;
-    height: 12em;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    object-fit: cover;
-    }
-}
-
-@media (max-width: 60em) {
-    .producto img {
-        width: 12.2em;
-        margin-bottom: 1em;
-        margin-left: -1em;
-        margin-top: -1em;
-        height: 12em;
-        border-top-left-radius: 0.5em;
-        border-top-right-radius: 0.5em;
-        object-fit: cover;
-        }
-}
-
-@media (max-width: 50em) {
-    .producto img {
-        width: 12.2em;
-        margin-bottom: 1em;
-        margin-left: -1em;
-        margin-top: -1em;
-        height: 12em;
-        border-top-left-radius: 0.5em;
-        border-top-right-radius: 0.5em;
-        object-fit: cover;
-        }
-}
-
-@media (max-width: 90em) {
-    .producto img {
-        width: 38.5em;
-        margin-bottom: 1em;
-        margin-left: -1em;
-        margin-top: -1em;
-        height: 12em;
-        border-top-left-radius: 0.5em;
-        border-top-right-radius: 0.5em;
-        object-fit: cover;
-        }
-}
-
-@media (max-width: 37.5em) { /* 600px */
-    .producto {
-        width: calc(50% - -4em);
-        margin-left: -6em;
-    }
-
-    .mpaviso {
-        font-weight: 700;
-        position: absolute;
-        margin-left: -57em;
-        margin-top: -7em;
-        background: #02a22a;
-        color: #fff;
-        padding-left: 2em;
-        padding-right: 2em;
-        padding-top: 0.3em;
-        padding-bottom: 0.3em;
-        border: 4px solid #02a22a;
-        border-top-left-radius: 0.2em;
-        border-bottom-left-radius: 0.2em;
-    }
-    
-    .mpaviso::after {
-        content: '⚠️';
-        position: absolute;
-        margin-left: 0.3em !important;!im;!imo;!imop;!i;!;
-    }
-    
-    .mpaviso::before, .mpaviso::after {
-        content: '⚠️';
-        position: absolute;
-        margin-left: -1.5em;
-        margin-top: -0.1em;
-    }
-
-    .producto img {
-    width: 12.2em;
-    margin-bottom: 1em;
-    margin-left: -1em;
-    margin-top: -1em;
-    height: 12em;
-    border-top-left-radius: 0.5em;
-    border-top-right-radius: 0.5em;
-    object-fit: cover;
-    }
-}
-
-@media (max-width: 25em) { /* 400px */
-    .producto {
-        width: calc(100% - -25em);
-        margin-left: -14.3em;
-    }
-
-    .mpaviso {
-        font-weight: 700;
-        position: absolute;
-        margin-left: -57em;
-        margin-top: -7em;
-        background: #02a22a;
-        color: #fff;
-        padding-left: 2em;
-        padding-right: 2em;
-        padding-top: 0.3em;
-        padding-bottom: 0.3em;
-        border: 4px solid #02a22a;
-        border-top-left-radius: 0.2em;
-        border-bottom-left-radius: 0.2em;
-    }
-    
-    .mpaviso::after {
-        content: '⚠️';
-        position: absolute;
-        margin-left: 0.3em !important;!im;!imo;!imop;!i;!;
-    }
-    
-    .mpaviso::before, .mpaviso::after {
-        content: '⚠️';
-        position: absolute;
-        margin-left: -1.5em;
-        margin-top: -0.1em;
-    }
-}
-
-@media (max-width: 383px) { /* 400px */
-    .producto {
-        width: calc(100% - -7em);
-        margin-left: -9.8em;
-        position: relative;
-        left: -0.5em;
-    }
-
-    .mpaviso {
-        font-weight: 700;
-        position: absolute;
-        margin-left: -57em;
-        margin-top: -7em;
-        background: #02a22a;
-        color: #fff;
-        padding-left: 2em;
-        padding-right: 2em;
-        padding-top: 0.3em;
-        padding-bottom: 0.3em;
-        border: 4px solid #02a22a;
-        border-top-left-radius: 0.2em;
-        border-bottom-left-radius: 0.2em;
-    }
-    
-    .mpaviso::after {
-        content: '⚠️';
-        position: absolute;
-        margin-left: 0.3em !important;!im;!imo;!imop;!i;!;
-    }
-    
-    .mpaviso::before, .mpaviso::after {
-        content: '⚠️';
-        position: absolute;
-        margin-left: -1.5em;
-        margin-top: -0.1em;
-    }
-}
-
-/* Scrollbar personalizada */
-::-webkit-scrollbar {
-    width: 5px; /* Grosor de la barra de desplazamiento */
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-image: url(https://img.freepik.com/foto-gratis/muro-hormigon-texturizado_53876-89536.jpg);
-    background-size: cover; /* Color de fondo de la barra de desplazamiento */
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background: #02a22a; /* Color del "agarre" de la barra de desplazamiento */
-    border-radius: 6px;
-  }
-
-/* Scrollbar personalizada */
-.dropdown-content::-webkit-scrollbar {
-    width: 5px;
-}
-  
-.dropdown-content::-webkit-scrollbar-track {
-    background: transparent;
-}
-  
-.dropdown-content::-webkit-scrollbar-thumb {
-    background: #ffffff00 !important;!i;!;!imo;!imo;!i;!;
-    border-radius: 0.5em;
-    padding-bottom: 1em;
-}
-
-/* Contenedor del menú */
-.menu-container {
-    text-align: center;
-}
-
-a.more-btn {
-    position: relative;
-    top: 0.5em;
-}
-
-/* Lista horizontal de categorías en escritorio */
-.category-menu {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    padding: 0;
-    margin-top: 1.9em;
-    top: 2em;
-    position: relative;
-}
-
-.category-menu a, .more-btn {
-    text-decoration: none;
-    color: #02a22a;
-    font-weight: 600;
-    padding: 8px 12px;
-    cursor: pointer;
-    background: #fff;
-}
-
-/* Hover sin border-radius ni transition */
-.category-menu a:hover, .more-btn:hover {
-    color: #fff;
-    background-color: #02a22a;
-}
-
-/* Dropdown en móviles */
-.dropdown-container {
-    display: none;
-    text-align: center;
-    margin-top: 1em;
-}
-
-.dropdown-btn {
-    background-color: #fff;
-    color: #02a22a;
-    font-size: 1.2em;
-    font-weight: 700;
-    border-radius: 0.5em;
-    border: 2px solid #02a22a;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-.dropdown-content {
-    display: none;
-    background-color: #fff;
-    border: 2px solid #02a22a;
-    position: absolute;
-    width: 200px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: left;
-    z-index: 10;
-}
-
-.dropdown-content a {
-    display: block;
-    padding: 10px;
-    color: #02a22a;
-    font-weight: 600;
-    text-decoration: none;
-}
-
-.dropdown-content a:hover {
-    background-color: #02a22a;
-    color: white;
-}
-
-/* Contenedor del dropdown "Más" */
-.more-dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-/* Dropdown de categorías restantes */
-.dropdown-content-more {
-    display: none;
-    position: absolute;
-    background-color: white;
-    min-width: 160px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-}
-
-/* Estilos de los enlaces dentro del dropdown */
-.dropdown-content-more a {
-    display: block;
-    padding: 10px;
-    color: #02a22a;
-    font-weight: 600;
-    text-decoration: none;
-    white-space: nowrap;
-}
-
-/* Hover de los enlaces */
-.dropdown-content-more a:hover {
-    background-color: #02a22a;
-    color: white;
-}
-
-/* Mostrar el menú completo en móviles */
-@media (max-width: 768px) {
-    .category-menu {
-        display: none;
-    }
-    .dropdown-container {
-        display: block;
-    }
-}
-
-.btn-ver-producto {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #02a22a;
-    text-decoration: none;
-    border-radius: 5px;
-    border: 2px solid #02a22a;
-    font-weight: 700;
-    position: absolute; /* Posiciona el botón de forma absoluta dentro de .producto */
-    bottom: -40px; /* Lo coloca justo debajo de .droptmn-btn */
-    left: 0; /* Alineado a la izquierda del contenedor */
-    right: 0; /* Alineado a la derecha del contenedor */
-    margin: 0 auto; /* Centrado horizontalmente */
-    width: 8em;
-    top: 23em;!;!e;!em;!e;!;!;
-    height: 1.4em;
-}
-
-.producto {
-    position: relative !important; /* Esto asegura que los botones se posicionen dentro del contenedor */
-}
-
-a.btn-ver-producto {}
-
-
-.btn-ver-producto:hover {
-    background-color: #02a22a;
-    color: #fff;
-}
-
-/* Estilos para el botón de menú en dispositivos móviles */
-.menu-toggle {
-    display: none; /* Ocultar en pantallas grandes */
-    background: #02a22a;
-    color: #fff;
-    border: none;
-    font-size: 1.2em;
-    cursor: pointer;
-    font-weight: 700;
-    text-align: center;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    width: 2.4em;
-    margin-left: 12.5em;
-}
-
-.menu-toggle:hover {
-    background: #fff;
-    color: #02a22a;
-}
-
-/* Media Query para pantallas más pequeñas */
-@media (max-width: 768px) {
-    .menu-toggle {
-        display: block;
-    }
-
-    nav ul {
-        display: none; /* Ocultar el menú normal en móviles */
-    }
-}
-
-.nav-menu.active {
-    display: flex; /* Mostrar cuando esté activo */
-}
-
-.nav-menu li {
-    margin: 10px 0;
-}
-
-#buscador {
-    padding: 8px 30px 8px 10px;
-    border: 2px solid #02a22a;
-    border-radius: 0.3em;
-    width: 25em;
-    background-color: #fff;
-    font-size: 16px;
-    margin-left: -28em;
-    color: #02a22a;
-    font-weight: 700;
-  }
-
-#buscador::placeholder {
-}
-  
-  #buscador::placeholder {
-    color: #02a22a;
-    opacity: 1;
-  }
-  
-  #buscador:focus {
-    outline: none;
-    border: 2px solid #02a22a;
-  }
-  
-  #search-button {
-    background-color: transparent;
-    border: 2px solid #02a22a;
-    cursor: pointer;
-    position: absolute;
-    right: 0.29em;
-    top: 50.1%;
-    transform: translateY(-50%);
-    padding-top: 0.24em;
-    padding-bottom: 0.21em;
-    border-top-right-radius: 0.3em;
-    border-bottom-right-radius: 0.3em;
-    border-top-left-radius: 0em !important;!i;!;
-  }
-
-.search-button {}
-
-.search-button:hover svg {
-    color: #fff;
-}
-
-#search-button:hover, svg:hover {
-    color: #fff !important;!i;!;
-    background: #02a22a;
-}
-  
-  .search-icon {
-    color: #02a22a;
-    width: 24px;
-    height: 24px;
-    margin-right: 0em;!em;!e;!;
-    margin-top: 0.1em;
-  }
-
-.search-icon:hover {
+a.logotext1:focus {
+  outline: none;
 }
-  
-  .search-container {
-    position: relative;
-    max-width: 500px;
-    margin: 20px auto;
-    margin-top: -9.23em;
-  }
 
+/* ================================
+   HEADERBOX (Navegación fija, fondo negro)
+================================ */
 .headerbox {
-    display: block;
-    background: #000;
-    color: #fff;
-    padding-top: 1.3em;!;!e;!em;!e;!;
-    width: 103%;
-    left: -1em;
-    position: relative;
-    top: -4em;
-    padding-bottom: 1em;
-    padding-left: 54em;
-}
-
-.headerbox a {
-    color: #fff;
-    text-decoration: none;
-    padding-left: 1em;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 0.8em 1.5em;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.8em;
 }
 
 .headerbox ul {
-    list-style: none; /* Elimina los puntos de lista */
-    padding: 0; /* Elimina el padding por defecto */
-    margin: 0; /* Elimina el margen por defecto */
-    display: flex; /* Hace que los li se alineen en una sola línea */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
 }
 
 .headerbox li {
-    margin-right: 15px; /* Espacio entre los elementos */
+  margin-right: 15px;
 }
 
-/* Estilo general para el dropdown */
-.droptmn {
-    position: relative;
-    display: inline-block;
+.headerbox a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  transition: color 0.3s ease;
 }
 
-.droptmn-menu {
-    display: none; /* Oculto por defecto */
-    position: absolute;
-    background-color: #fff;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
-    min-width: 6.4em;
-    padding: 10px 0;
-    border-radius: 5px;
-    border: 2px solid #02a22a;
-    max-height: 200px; /* Define un límite de altura para activar el scroll */
-    overflow-y: auto; /* Permite el scroll vertical si es necesario */
-    margin-top: 0.2em;
+.headerbox a:hover {
+  color: #02a22a;
 }
 
-/* Estilos de los elementos de la lista */
-.droptmn-menu li {
-    padding: 8px 16px;
-    cursor: pointer;
-    font-weight: 700;
+/* ================================
+   HEADER (Zona superior: logo, nombre y buscador)
+================================ */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em 0;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  margin-top: 3em; /* Espacio para la barra negra fija */
+  position: relative;
+  height: 3em;
 }
 
-.droptmn-menu li:hover {
-    background-color: #02a22a;
-    color: #fff;
-}
-
-/* Mostrar menú cuando tiene la clase "droptmn-show" */
-.droptmn-show {
-    display: block;
-}
-
-/* Botón del dropdown */
-.droptmn-btn {
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #02a22a;
-    border: 2px solid #02a22a;
-    border-radius: 0.3em;
-    cursor: pointer;
-    font-family: 'Gilroy', sans-serif;
-    font-weight: 700;
-    font-size: 18px;
-    width: 5.9em;
-    height: 2.5em;!;!e;!em;!e;!;
-}
-
-.textomed {
-    position: absolute;
-    left: 0.98em;
-    top: 0.6em;
-}
-
-/* Cambio de color al pasar el ratón */
-.droptmn-btn:hover {
-    background-color: #02a22a;
-    color: #fff;
-}
-
-/* Hacer invisible el scrollbar pero funcional */
-.droptmn-menu::-webkit-scrollbar {
-    width: 0px; /* Tamaño del scrollbar */
-}
-
-.droptmn-menu::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.droptmn-menu::-webkit-scrollbar-thumb {
-    background: transparent; /* Invisible */
-}
-
+/* Logo */
 .logo1 {
-    cursor: pointer;
+  margin-top: -6.4em;
+  width: 6em;
+  height: auto;
+  margin-bottom: 0.5em;
+  margin-left: 27em;
+  !;!e;!em;!e;!;
+  position: absolute;
+}
+
+/* Nombre del sitio */
+a.logotext1 {
+  text-align: center;
+  color: #02a22a;
+  font-size: 0.8em !important;!i;!;
+  font-weight: 700;
+  text-decoration: none;
+  line-height: 1.2em;
+  z-index: 999;
+  position: absolute;
+  top: 0.56em;!em;!e;!;
+  left: 13em;
+}
+
+.search-container {
+  position: absolute;
+  width: 33em;
+  margin-top: 5.4em;
+  left: 44em;
+}
+
+#buscador {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #02a22a;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: 700;
+  color: #02a22a;
+}
+
+#buscador:focus {
+  outline: none;
+  border: 2px solid #02a22a;
+}
+#buscador::placeholder {
+  color: #02a22a;
+}
+
+#search-button {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search-icon {
+  color: #02a22a;
+  width: 20px;
+  height: 1.5em;
+  margin-right: -4.5em;!;!e;!em;!e;!;
+  margin-left;:;
+  margin-left;: 1;
+  margin-left;: 1e;
+  margin-left;: 1;
+  border: 2px solid #02a22a;
+  padding-top: 0.6em;
+  padding-bottom: 0.6em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin-top: 0.2em;
+  border-top-right-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+.search-button:hover svg,
+#search-button:hover,
+svg:hover {color: #fff;background: #02a22a;}
+
+
+/* ================================
+   AUTH BUTTONS
+================================ */
+#auth-buttons {
+  color: #02a22a;
+  background: #fff;
+  position: relative;
+  margin: -2.8em auto 0 auto;
+  width: max-content;
+  top: 0.6em;
+  left: 15em;
+}
+.logreg {
+  background: #fff;
+  color: #02a22a;
+  border: none;
+  padding: 0.2em 2em;
+  font-family: 'Gilroy';
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 0.3em;
+  display: block;
+  width: 11em;
+  margin: -9.7em auto 0;
+  position: relative;
+  !;!e;!em;!e;!;
+  z-index: 2000;
+}
+.logreg:hover {
+  background: #02a22a;
+  color: #fff;
+  cursor: pointer;
+}
+.reg {
+  margin-top: -1.7em !important;!i;!;
+  margin-left: 23.4em;
+  height: 1.7em;
+}
+
+/* ================================
+   NAVIGACIÓN
+================================ */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0 1em;
+  position: relative;
+  color: #02a22a;
+}
+nav ul li a {
+  color: #02a22a;
+  text-decoration: none;
+  padding: 0.5em 1em;
+  display: block;
+  font-weight: 700;
+}
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  padding: 1em 0;
+  position: absolute;
+  width: 100%;
+  top: 60px;
+  left: 0;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ================================
+   CATÁLOGO Y PRODUCTOS
+================================ */
+#catalogo {
+  padding: 2em;
+  color: #02a22a;
+}
+
+/* Contenedor de productos (mobile-first: 2 columnas) */
+.productos {
+  display: grid;
+  grid-gap: 1em;
+  margin: 1em;
+  grid-template-columns: repeat(2, 1fr);
+  !em;!e;!;
+  position: relative;
+  left: 10em;
+}
+.producto {
+  background: #ddd;
+  padding: 1em;
+  text-align: center;
+  border-radius: 0.5em;
+  box-shadow: 0 0 1em rgba(0,0,0,0.29);
+  color: #02a22a;
+  height: 25em;
+  position: relative;
+}
+/* La imagen ocupa el 100% del ancho y está pegada a los bordes laterales */
+.producto img {
+  width: 112%;
+  margin: -1em 0 1em -1em;
+  height: 12em;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  background: #fff;
+}
+.precio {
+  font-weight: 700;
+}
+
+/* Botón "Ver Producto" */
+.btn-ver-producto {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #02a22a;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 2px solid #02a22a;
+  font-weight: 700;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 8em;
+  top: 23em;
+  height: 1.4em;
+}
+.btn-ver-producto:hover {
+  background-color: #02a22a;
+  color: #fff;
+}
+
+/* ================================
+   DROPDOWN (Medidas)
+================================ */
+.droptmn {
+  position: relative;
+  display: inline-block;
+}
+.droptmn-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  z-index: 1000;
+  min-width: 6.4em;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: 2px solid #02a22a;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 0.2em;
+}
+.droptmn-menu li {
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 700;
+}
+.droptmn-menu li:hover {
+  background-color: #02a22a;
+  color: #fff;
+}
+.droptmn-btn {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #02a22a;
+  border: 2px solid #02a22a;
+  border-radius: 0.3em;
+  cursor: pointer;
+  font-family: 'Gilroy', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  width: 5.9em;
+  height: 2.5em;
+}
+.textomed {
+  position: absolute;
+  left: 0.98em;
+  top: 0.6em;
+}
+.droptmn-btn:hover {
+  background-color: #02a22a;
+  color: #fff;
+}
+
+/* ================================
+   FOOTER
+================================ */
+footer {
+  text-align: center;
+  padding: 1em;
+  background-color: #fff;
+  color: #02a22a;
+  box-shadow: 0 0 0.4em rgba(0,0,0,0.45);
+  width: 100%;
+  position: absolute;
+  height: 3.5em;
+  line-height: 0.4em;
+  font-weight: 700;
+  margin-top: 51.8em;!em;!e;!;
+}
+
+/* ================================
+   SCROLLBAR PERSONALIZADA
+================================ */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-image: url(https://img.freepik.com/foto-gratis/muro-hormigon-texturizado_53876-89536.jpg);
+  background-size: cover;
+}
+::-webkit-scrollbar-thumb {
+  background: #02a22a;
+  border-radius: 6px;
+}
+.dropdown-content::-webkit-scrollbar {
+  width: 5px;
+}
+.dropdown-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+.dropdown-content::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 0.5em;
+  padding-bottom: 1em;
+}
+
+/* ================================
+   MEDIA QUERIES (MOBILE-FIRST)
+================================ */
+
+/* Por defecto (móviles): 2 productos por línea */
+
+/* Tabletas y pantallas medianas (768px - 1079px): 3 columnas */
+@media (min-width: 768px) and (max-width: 1079px) {
+  .productos {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Notebooks y pantallas grandes (1080px o más): 6 columnas */
+@media (min-width: 1080px) {
+  .productos {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  header h1 {
+    font-size: 3em;
+  }
+  .logreg, #auth-buttons {
+    margin-top: -4em;
+  }
 }
