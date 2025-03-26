@@ -263,6 +263,15 @@ function inicializarDropdown() {
         // Toggle del menú al hacer clic en el botón
         btn.addEventListener('click', (e) => {
             e.stopPropagation(); // Evita que el clic cierre el menú inmediatamente
+
+            // Cerrar otros menús abiertos antes de abrir el actual
+            document.querySelectorAll('.droptmn-menu.droptmn-show').forEach(openMenu => {
+                if (openMenu !== menu) {
+                    openMenu.classList.remove('droptmn-show');
+                }
+            });
+
+            // Alternar la visibilidad del menú actual
             menu.classList.toggle('droptmn-show');
         });
 
@@ -284,13 +293,13 @@ function inicializarDropdown() {
         menu.querySelectorAll('li').forEach(item => {
             item.addEventListener('click', () => {
                 btn.textContent = item.textContent; // Actualizar el texto del botón
-                menu.classList.remove('droptmn-show'); // Cerrar menú
+                menu.classList.remove('droptmn-show'); // Cerrar el menú
             });
         });
     });
 }
 
-// Ejecutar la inicialización después de cargar productos
+// Ejecutar la inicialización después de cargar la página
 document.addEventListener('DOMContentLoaded', () => {
     inicializarDropdown();
 });
